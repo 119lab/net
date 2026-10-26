@@ -386,15 +386,6 @@ td {
   .intro h2 {
     font-size: 23px;
   }
-.sns {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 0;
-  }
-  .sns-item {
-    flex: 1;
-  }
 }
 
 /* 全ページ共通の幅。本文は800px以内、左右の余白は20px */
@@ -437,4 +428,49 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
   .lab-corner-card { min-height: 0; padding: 19px 20px; }
   .lab-corner-card h3 { font-size: 29px; margin-top: 9px; }
   .lab-corner-card p { margin-bottom: 8px; }
+}
+
+/* SNS：通常は縦並び、大画面では3列 */
+.sns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  margin-block: 32px;
+}
+.sns-item { min-width: 0; }
+.sns .instagram-media {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-inline: 0 !important;
+}
+.sns .twitter-tweet, .sns .twitter-tweet iframe {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+.sns-youtube > iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 1100px) {
+  .sns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+    width: min(1200px, calc(100vw - 40px));
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* SNSが1列のとき、Xの埋め込み投稿を左右中央に配置 */
+@media (max-width: 1099.98px) {
+  .sns .twitter-tweet {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
