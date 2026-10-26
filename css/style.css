@@ -386,6 +386,15 @@ td {
   .intro h2 {
     font-size: 23px;
   }
+.sns {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+  .sns-item {
+    flex: 1;
+  }
 }
 
 /* 全ページ共通の幅。本文は800px以内、左右の余白は20px */
