@@ -467,10 +467,18 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
   }
 }
 
-/* SNSが1列のとき、Xの埋め込み投稿を左右中央に配置 */
-@media (max-width: 1099.98px) {
-  .sns .twitter-tweet {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+/* Xは専用の550px以内の枠を中央に配置する */
+.sns-x > h3 { text-align: center; }
+.x-embed-center {
+  width: 100%;
+  max-width: 550px;
+  min-width: 0;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+}
+.x-embed-center > .twitter-tweet {
+  width: 100% !important;
+  max-width: 550px !important;
+  margin-inline: auto !important;
 }
