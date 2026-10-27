@@ -535,3 +535,11 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
   .magazine-intro-text { min-width: 0; font-size: 0.85rem; }
   .magazine-intro-text h2 { font-size: 1.1rem; }
 }
+
+/* SNSはリンクでコンパクトに表示 */
+.sns-links { text-align: center; padding: 12px; }
+.sns-links h3 { margin: 0 0 8px; }
+.sns-links a { color: #ff8a92; }
+
+.video-links ul { list-style: none; padding: 0; margin: 0; }
+.video-links li + li { margin-top: 6px; }
