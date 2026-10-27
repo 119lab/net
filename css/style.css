@@ -591,3 +591,25 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .about-link, .about-back { display: inline-block; color: #ffadb3; font-weight: bold; font-size: 14px; }
 .about-back { margin-top: 30px; }
 @media (max-width: 480px) { .about-page { padding-top: 32px; } .about-specs div { grid-template-columns: 1fr; gap: 2px; } }
+
+/* お問い合わせページ */
+.contact-page { padding-top: 48px; padding-bottom: 72px; }
+.contact-eyebrow { color: #ff8991; font-size: 12px; font-weight: 800; letter-spacing: .14em; }
+.contact-heading { padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.contact-page h1 { margin: 8px 0 14px; text-align: left; font-size: clamp(30px, 5vw, 40px); line-height: 1.3; }
+.contact-page p { color: #d0d8e0; line-height: 1.8; }
+.contact-panel { margin-top: 24px; padding: clamp(20px, 4vw, 30px); background: #151a21; border: 1px solid #58636e; border-top: 4px solid var(--red); border-radius: 7px; }
+.contact-panel h2 { margin: 9px 0 12px; font-size: clamp(20px, 3.6vw, 27px); }
+.contact-topics { margin: 20px 0; padding-left: 1.4em; color: #d0d8e0; line-height: 1.8; }
+.contact-topics li + li { margin-top: 6px; }
+.contact-link, .contact-back { display: inline-block; color: #ffadb3; font-size: 14px; font-weight: bold; }
+.contact-back { margin-top: 30px; }
+.contact-page .notice { background: #302229; border-left: 3px solid #ff8991; padding: 12px 16px; }
+.contact-page fieldset { margin: 20px 0; padding: 12px 16px; border: 1px solid #58636e; border-radius: 5px; }
+.contact-page legend { font-weight: bold; padding: 0 6px; }
+.contact-page fieldset label { margin: 5px 14px 5px 0; }
+.contact-page .form-field label { display: block; font-weight: bold; }
+.contact-page input[type="text"], .contact-page input[type="email"], .contact-page textarea, .contact-page select { color: #101419; background: #fff; border: 1px solid #abb5c0; border-radius: 4px; padding: 10px; font: inherit; }
+.contact-page .disabled-submit { padding: 10px 24px; border: 0; border-radius: 5px; background: #66707a; color: #fff; }
+.contact-page .contact-form-note { font-size: 13px; }
+@media (max-width: 480px) { .contact-page { padding-top: 32px; } }
