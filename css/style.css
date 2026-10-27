@@ -5,7 +5,7 @@
   --bg: #101419;
   --panel: #1c232b;
   --muted: #abb5c0;
-  --red: #dc3342;a
+  --red: #dc3342;
   --line: #38414b;
   --white: #f5f7fa;
 }
@@ -311,8 +311,123 @@ td {
   background-color: #902020;
 }
 
-@media (max-width: 800px) {
-  .headrow {
+
+
+
+/* 全ページ共通の幅。本文は800px以内、左右の余白は20px */
+.page {width:100%; max-width:800px; padding:24px 20px 48px; margin:0 auto;}
+.page img {height:auto;}
+.page input:not([type="radio"]):not([type="checkbox"]), .page textarea, .page select {max-width:100%;}
+.page input[type="text"],.page input[type="email"],.page textarea {width:100%; padding:9px; font:inherit;}
+.page textarea {min-height:140px;}
+.page label {display:inline-block; margin:7px 0;}
+.page .form-field {margin:16px 0;}
+.page .centered {display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;}
+.page table {display:block; overflow-x:auto;}
+.page td,.page th {color:var(--white); background:transparent;}
+.page .notice {border-left:3px solid var(--red);padding:10px 14px;}
+.page .disabled-submit {font:inherit; padding:12px 24px; opacity:.65;cursor:not-allowed;}
+
+
+/* トップページ：119TECH / 119VOICE / 119SCIENCE */
+.lab-corners { padding-top: 38px; padding-bottom: 48px; }
+.lab-corners-heading { margin-bottom: 20px; }
+.lab-corners-heading h2 { margin: 8px 0 0; font-size: clamp(19px, 2.9vw, 25px); line-height: 1.5; }
+.lab-corner-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.lab-corner-card {
+  min-width: 0; display: flex; flex-direction: column; align-items: flex-start;
+  min-height: 195px; padding: 22px 18px 18px;
+  border: 1px solid #58636e; border-top: 4px solid var(--red);
+  border-radius: 7px; background: #151a21; color: var(--white);
+  transition: border-color .2s ease, transform .2s ease;
+}
+a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c; color: var(--white); transform: translateY(-3px); }
+.lab-corner-number { font-size: 10px; font-weight: 700; letter-spacing: .1em; color: #b0bcc8; }
+.lab-corner-card h3 { margin: 15px 0 5px; font-size: clamp(23px, 3.5vw, 31px); line-height: 1.2; letter-spacing: -.03em; font-family: inherit; overflow-wrap: anywhere; }
+.lab-corner-card h3 span { color: #ff8991; }
+.lab-corner-card p { margin: 0 0 17px; font-size: 14px; color: #e0e6ed; }
+.lab-corner-link { margin-top: auto; color: #ffadb3; font-size: 12px; font-weight: 700; }
+.lab-corner-upcoming { border-top-color: #87919d; }
+.lab-corner-soon { color: #b0bcc8; }
+
+
+/* SNS：スマホは1列、PCは幅に応じて2列／3列 */
+.sns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 100%;
+  margin: 32px 0;
+}
+.sns-item { min-width: 0; }
+.sns .instagram-media,
+.sns iframe.instagram-media {
+  display: block !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  width: min(100%, 326px) !important;
+  max-width: 326px !important;
+  margin: 0 auto !important;
+  zoom: 1 !important;
+}
+.sns .instagram-media iframe {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.sns .twitter-tweet, .sns .twitter-tweet iframe {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+.sns-youtube .youtube-embed {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.sns-youtube .youtube-embed iframe {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  max-width: 100%;
+  border: 0;
+}
+@media (min-width: 900px), (orientation: landscape) {
+  .sns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 32px 0;
+    transform: none;
+  }
+}
+@media (min-width: 1100px) {
+  .sns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Xは専用の550px以内の枠を中央に配置する */
+.sns-x > h3 { text-align: center; }
+.x-embed-center {
+  width: 100%;
+  max-width: 550px;
+  min-width: 0;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+}
+.x-embed-center > .twitter-tweet {
+  width: 100% !important;
+  max-width: 550px !important;
+  margin-inline: auto !important;
+}
+
+/* 900px未満でも横向きならPC向けレイアウト */
+@media (width < 900px) and (orientation: portrait) {
+.headrow {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -336,9 +451,7 @@ td {
     gap: 20px;
     padding: 23px;
   }
-}
-@media (max-width: 520px) {
-  .brand img {
+.brand img {
     width: 190px;
   }
   .mainnav {
@@ -386,99 +499,15 @@ td {
   .intro h2 {
     font-size: 23px;
   }
-}
-
-/* 全ページ共通の幅。本文は800px以内、左右の余白は20px */
-.page {width:100%; max-width:800px; padding:24px 20px 48px; margin:0 auto;}
-.page img {height:auto;}
-.page input:not([type="radio"]):not([type="checkbox"]), .page textarea, .page select {max-width:100%;}
-.page input[type="text"],.page input[type="email"],.page textarea {width:100%; padding:9px; font:inherit;}
-.page textarea {min-height:140px;}
-.page label {display:inline-block; margin:7px 0;}
-.page .form-field {margin:16px 0;}
-.page .centered {display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;}
-.page table {display:block; overflow-x:auto;}
-.page td,.page th {color:var(--white); background:transparent;}
-.page .notice {border-left:3px solid var(--red);padding:10px 14px;}
-.page .disabled-submit {font:inherit; padding:12px 24px; opacity:.65;cursor:not-allowed;}
-@media(max-width:520px){.page{padding-inline:20px;} .page h1{font-size:1.65rem;}}
-
-/* トップページ：119TECH / 119VOICE / 119SCIENCE */
-.lab-corners { padding-top: 38px; padding-bottom: 48px; }
-.lab-corners-heading { margin-bottom: 20px; }
-.lab-corners-heading h2 { margin: 8px 0 0; font-size: clamp(19px, 2.9vw, 25px); line-height: 1.5; }
-.lab-corner-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.lab-corner-card {
-  min-width: 0; display: flex; flex-direction: column; align-items: flex-start;
-  min-height: 195px; padding: 22px 18px 18px;
-  border: 1px solid #58636e; border-top: 4px solid var(--red);
-  border-radius: 7px; background: #151a21; color: var(--white);
-  transition: border-color .2s ease, transform .2s ease;
-}
-a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c; color: var(--white); transform: translateY(-3px); }
-.lab-corner-number { font-size: 10px; font-weight: 700; letter-spacing: .1em; color: #b0bcc8; }
-.lab-corner-card h3 { margin: 15px 0 5px; font-size: clamp(23px, 3.5vw, 31px); line-height: 1.2; letter-spacing: -.03em; font-family: inherit; overflow-wrap: anywhere; }
-.lab-corner-card h3 span { color: #ff8991; }
-.lab-corner-card p { margin: 0 0 17px; font-size: 14px; color: #e0e6ed; }
-.lab-corner-link { margin-top: auto; color: #ffadb3; font-size: 12px; font-weight: 700; }
-.lab-corner-upcoming { border-top-color: #87919d; }
-.lab-corner-soon { color: #b0bcc8; }
-@media (max-width: 650px) {
-  .lab-corner-grid { grid-template-columns: 1fr; gap: 12px; }
+.page{padding-inline:20px;} .page h1{font-size:1.65rem;}
+.lab-corner-grid { grid-template-columns: 1fr; gap: 12px; }
   .lab-corner-card { min-height: 0; padding: 19px 20px; }
   .lab-corner-card h3 { font-size: 29px; margin-top: 9px; }
   .lab-corner-card p { margin-bottom: 8px; }
 }
 
-/* SNS：通常は縦並び、大画面では3列 */
-.sns {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 32px;
-  margin-block: 32px;
-}
-.sns-item { min-width: 0; }
-.sns .instagram-media {
-  min-width: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-inline: 0 !important;
-}
-.sns .twitter-tweet, .sns .twitter-tweet iframe {
-  max-width: 100% !important;
-  min-width: 0 !important;
-}
-.sns-youtube > iframe {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  margin-bottom: 20px;
-}
-@media (min-width: 1100px) {
-  .sns {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
-    gap: 24px;
-    width: min(1200px, calc(100vw - 40px));
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-}
 
-/* Xは専用の550px以内の枠を中央に配置する */
-.sns-x > h3 { text-align: center; }
-.x-embed-center {
-  width: 100%;
-  max-width: 550px;
-  min-width: 0;
-  margin: 0 auto;
-  display: grid;
-  justify-items: center;
-}
-.x-embed-center > .twitter-tweet {
-  width: 100% !important;
-  max-width: 550px !important;
-  margin-inline: auto !important;
-}
+/* 補助リンクはフッターにまとめる */
+.footerlinks { display: flex; flex-wrap: wrap; gap: 10px 18px; }
+.footerlinks a { color: inherit; }
+.footerlinks a:hover { color: #ff8a92; }
