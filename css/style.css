@@ -613,3 +613,19 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .contact-page .disabled-submit { padding: 10px 24px; border: 0; border-radius: 5px; background: #66707a; color: #fff; }
 .contact-page .contact-form-note { font-size: 13px; }
 @media (max-width: 480px) { .contact-page { padding-top: 32px; } }
+
+/* 記事本文 */
+.article-detail { padding-top: 48px; padding-bottom: 72px; }
+.article-detail-heading { padding: 0 0 26px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.article-detail-meta { display: flex; justify-content: space-between; gap: 12px; color: #ff8991; font-size: 12px; font-weight: 800; letter-spacing: .1em; }
+.article-detail-heading h1 { margin: 12px 0 0; text-align: left; font-size: clamp(26px, 4.6vw, 36px); line-height: 1.45; }
+.article-detail h2, .article-detail h3, .article-detail h4 { color: var(--white); line-height: 1.55; }
+.article-detail h2 { margin: 30px 0 16px; font-size: clamp(20px, 3.3vw, 25px); }
+.article-detail h3, .article-detail h4 { margin: 34px 0 14px; padding-left: 12px; border-left: 4px solid var(--red); font-size: clamp(18px, 2.7vw, 21px); }
+.article-detail p { margin: 0 0 22px; color: #d0d8e0; line-height: 1.95; overflow-wrap: anywhere; }
+.article-detail img { width: min(100%, 560px); height: auto; margin: 24px auto; border-radius: 5px; }
+.article-detail ol { padding-left: 1.6em; color: #d0d8e0; line-height: 1.8; overflow-wrap: anywhere; }
+.article-detail ol li + li { margin-top: 12px; }
+.article-detail-nav { display: flex; flex-wrap: wrap; gap: 14px 30px; margin-top: 42px; padding-top: 22px; border-top: 1px solid var(--line); }
+.article-detail-nav a { color: #ffadb3; font-size: 14px; font-weight: bold; }
+@media (max-width: 480px) { .article-detail { padding-top: 32px; } }
