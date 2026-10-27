@@ -561,3 +561,15 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .article-card-link { display: inline-block; margin-top: 14px; color: #ffadb3; font-size: 13px; font-weight: 700; }
 .article-back { display: inline-block; margin-top: 30px; color: #ffadb3; font-size: 14px; }
 @media (max-width: 480px) { .article-index { padding-top: 32px; } .article-card { padding: 19px 18px; } }
+
+/* フリーペーパーの表紙と目次 */
+.magazine-contents-layout { display: flex; align-items: flex-start; gap: clamp(16px, 4vw, 32px); margin: 28px 0; }
+.magazine-cover { flex: 0 0 40%; max-width: 300px; }
+.magazine-cover img { width: 100%; height: auto; }
+.magazine-contents { flex: 1; min-width: 0; }
+.magazine-contents h2 { margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--red); font-size: clamp(19px, 3vw, 25px); }
+.magazine-contents-item { padding: 11px 0; border-bottom: 1px solid var(--line); }
+.magazine-contents-item span { color: #ff8991; font-size: 12px; font-weight: bold; }
+.magazine-contents-item h3 { margin: 3px 0; font-size: clamp(15px, 2.2vw, 19px); line-height: 1.5; }
+.magazine-contents-item p { margin: 3px 0 0; font-size: 14px; line-height: 1.6; }
+@media (max-width: 480px) { .magazine-cover { flex-basis: 36%; } .magazine-contents-item { padding: 8px 0; } .magazine-contents-item p { font-size: 12px; } }
