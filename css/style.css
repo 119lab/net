@@ -629,3 +629,18 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .article-detail-nav { display: flex; flex-wrap: wrap; gap: 14px 30px; margin-top: 42px; padding-top: 22px; border-top: 1px solid var(--line); }
 .article-detail-nav a { color: #ffadb3; font-size: 14px; font-weight: bold; }
 @media (max-width: 480px) { .article-detail { padding-top: 32px; } }
+
+/* 発信にあたって */
+.message-page { padding-top: 36px; padding-bottom: 72px; }
+.message-breadcrumb { color: #b0bcc8; font-size: 13px; overflow-wrap: anywhere; }
+.message-breadcrumb a { color: #ffadb3; }
+.message-heading { padding: 30px 0 25px; border-bottom: 1px solid var(--line); }
+.message-eyebrow { color: #ff8991; font-size: 12px; font-weight: 800; letter-spacing: .14em; }
+.message-heading h1 { margin: 10px 0 0; text-align: left; font-size: clamp(25px, 4.5vw, 36px); line-height: 1.5; }
+.message-body { margin-top: 25px; padding: clamp(20px, 4vw, 32px); background: #151a21; border: 1px solid #58636e; border-top: 4px solid var(--red); border-radius: 7px; }
+.message-body p { margin: 0 0 22px; color: #d0d8e0; line-height: 1.95; }
+.message-body h2 { margin: 36px 0 15px; padding-left: 12px; border-left: 4px solid var(--red); font-size: clamp(21px, 3.6vw, 27px); }
+.message-body .message-signature { margin: 32px 0 0; text-align: right; color: #f5f7fa; }
+.message-links { display: flex; flex-wrap: wrap; gap: 14px 30px; margin-top: 30px; }
+.message-links a { color: #ffadb3; font-size: 14px; font-weight: bold; }
+@media (max-width: 480px) { .message-page { padding-top: 26px; } }
