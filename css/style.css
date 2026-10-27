@@ -511,3 +511,27 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .footerlinks { display: flex; flex-wrap: wrap; gap: 10px 18px; }
 .footerlinks a { color: inherit; }
 .footerlinks a:hover { color: #ff8a92; }
+
+/* トップページのフリーペーパー紹介 */
+.magazine-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 36px);
+  padding: 32px 20px;
+}
+.magazine-intro-cover {
+  flex: 0 0 200px;
+  width: 200px;
+  height: auto;
+}
+.magazine-intro-text { max-width: 430px; }
+.magazine-intro-text h2 { margin: 4px 0 10px; font-size: 1.4rem; }
+.magazine-intro-text p { margin: 0 0 10px; }
+.magazine-intro-text a { color: #ff8a92; }
+@media (max-width: 480px) {
+  .magazine-intro { align-items: flex-start; gap: 16px; padding: 24px 16px; }
+  .magazine-intro-cover { flex-basis: 36%; width: 36%; }
+  .magazine-intro-text { min-width: 0; font-size: 0.85rem; }
+  .magazine-intro-text h2 { font-size: 1.1rem; }
+}
