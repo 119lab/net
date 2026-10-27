@@ -695,3 +695,8 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 
 /* サンプル・創刊準備の案内 */
 .page .sample-notice { margin: 0 0 24px; padding: 12px 16px; border-left: 3px solid #ff8991; border-radius: 3px; background: #302229; color: #f5e7e8; font-size: 14px; line-height: 1.7; }
+
+/* トップページのSNSとお問い合わせ */
+.social-section { padding: 24px 20px; }
+.social-section-title { margin: 0 0 14px; font-size: clamp(20px, 3vw, 25px); }
+.top-contact-notice { margin: 12px 20px; color: #d0d8e0; font-size: 13px; text-align: center; }
