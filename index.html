@@ -26,7 +26,7 @@
         content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=20261027-sns-no-overflow-169">
+  <link rel="stylesheet" href="css/style.css?v=20261027-message-feature">
 
   <!-- Google Analytics 4 -->
   <script async
@@ -110,8 +110,11 @@
         <p>
           現場の知恵と、新しい技術をつなぐ。<br />消防の未来を考える専門メディア。
         </p>
-        <a class="action" href="about/message.html">「119LAB.」と「119LAB.net」の発信にあたって →</a>
-        <p style="margin: 16px 0 0;"><a class="action" href="article/article.html">最新記事を読む ↓</a></p>
+        <a class="hero-message" href="about/message.html">
+          <span class="hero-message-copy"><span class="hero-message-label">OUR MESSAGE</span><strong>発信にあたってのご挨拶</strong><span class="hero-message-detail">119LAB.に込めた想いをお伝えします。</span></span>
+          <span class="hero-message-arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="hero-articles"><a class="action" href="article/article.html">最新記事を読む ↓</a></p>
       </div>
     </section>
 
@@ -122,63 +125,43 @@
         <h2 id="lab-corners-title">消防の今と未来を、3つの視点から。</h2>
       </div>
       <div class="lab-corner-grid">
-        <a
-          class="lab-corner-card"
-          href="article/a001.html"
-          aria-label="119TECH：技術・装備・DXの記事を読む"
-        >
+        <a class="lab-corner-card" href="article/a001.html">
           <span class="lab-corner-number">01 / TECHNOLOGY</span>
           <h3>119<span>TECH</span></h3>
           <p>技術・装備・DX</p>
-          <span class="lab-corner-link">記事を読む<span aria-hidden="true">↗</span></span
-          >
-          <ul>
-            <li>データ連携が変える救急搬送の未来</li>
-            <li>現場を変える次世代救助資機材</li>
-            <li>指令・予防・災害対応におけるAI活用</li>
-          </ul>
-
+          <span class="lab-current-label">最新記事</span>
+          <strong class="lab-current-title">救急DXで搬送時間を短縮</strong>
+          <span class="lab-corner-link">記事を読む ↗</span>
         </a>
-        <a
-          class="lab-corner-card"
-          href="article/a002.html"
-          aria-label="119VOICE：現場の声・読者投稿の記事を読む"
-        >
+        <a class="lab-corner-card" href="article/a002.html">
           <span class="lab-corner-number">02 / VOICES</span>
           <h3>119<span>VOICE</span></h3>
           <p>現場の声・読者投稿</p>
-          <span class="lab-corner-link"
-            >記事を読む <span aria-hidden="true">↗</span></span
-          >
-          <ul>
-            <li>若手の理想と現実、その間で思うこと</li>
-            <li>女性消防職員が語る仕事の魅力と課題</li>
-            <li>消防人生で忘れられない教訓</li>
-          </ul>
-
+          <span class="lab-current-label">最新記事</span>
+          <strong class="lab-current-title">若手消防士５人に聞いた本音</strong>
+          <span class="lab-corner-link">記事を読む ↗</span>
         </a>
-        <a
-          class="lab-corner-card"
-          href="article/a003.html"
-          aria-label="119SCIENCE：科学・研究・論文の記事を読む"
-        >
+        <a class="lab-corner-card" href="article/a003.html">
           <span class="lab-corner-number">03 / RESEARCH</span>
           <h3>119<span>SCIENCE</span></h3>
           <p>科学・研究・論文</p>
-          <span class="lab-corner-link"
-            >記事を読む <span aria-hidden="true">↗</span></span
-          >
-         <ul>
-            <li>火災性状と消火効果の最新研究</li>
-            <li>延焼メカニズムを科学する</li>
-            <li>心肺蘇生の科学的エビデンス</li>
-          </ul>
-          </a>
-        </div>
+          <span class="lab-current-label">最新記事</span>
+          <strong class="lab-current-title">放水戦術を科学する</strong>
+          <span class="lab-corner-link">記事を読む ↗</span>
+        </a>
+      </div>
+      <div class="lab-future-topics">
+        <h3>今後の企画例</h3>
+        <p>救助資機材、女性消防職員の声、延焼メカニズム、心肺蘇生の科学などを検討しています。</p>
+      </div>
+      <a class="lab-all-articles" href="article/article.html">最新記事一覧を見る →</a>
     </section>
 
     <section class="magazine-intro wrap" aria-labelledby="magazine-intro-title">
-      <img class="magazine-intro-cover" src="about/images/2027001.jpg" alt="フリーペーパー119LAB. 創刊号の表紙" />
+      <div class="magazine-intro-cover-wrap">
+        <img class="magazine-intro-cover" src="about/images/2027001.jpg" alt="フリーペーパー119LAB. 創刊号の表紙イメージ" />
+        <span class="magazine-status">創刊準備中・表紙イメージ</span>
+      </div>
       <div class="magazine-intro-text">
         <span class="category">ABOUT 119LAB.</span>
         <h2 id="magazine-intro-title">現場と科学と、人をつなぐ。</h2>

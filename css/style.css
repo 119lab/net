@@ -644,3 +644,26 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .message-links { display: flex; flex-wrap: wrap; gap: 14px 30px; margin-top: 30px; }
 .message-links a { color: #ffadb3; font-size: 14px; font-weight: bold; }
 @media (max-width: 480px) { .message-page { padding-top: 26px; } }
+
+/* トップページの記事と企画案 */
+.lab-current-label { color: #b0bcc8; font-size: 11px; font-weight: 700; }
+.lab-current-title { display: block; margin: 6px 0 18px; color: var(--white); font-size: 16px; line-height: 1.6; }
+.lab-future-topics { margin-top: 18px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 7px; background: #151a21; }
+.lab-future-topics h3 { margin: 0 0 4px; font-size: 14px; color: #ffadb3; }
+.lab-future-topics p { margin: 0; font-size: 13px; line-height: 1.7; }
+.lab-all-articles { display: inline-block; margin-top: 18px; color: #ffadb3; font-size: 14px; font-weight: 700; }
+.magazine-intro-cover-wrap { flex: 0 0 200px; width: 200px; }
+.magazine-intro-cover-wrap .magazine-intro-cover { width: 100%; }
+.magazine-status { display: block; margin-top: 7px; color: #c5ced8; font-size: 11px; line-height: 1.5; text-align: center; }
+@media (max-width: 480px) { .magazine-intro-cover-wrap { flex-basis: 36%; width: 36%; } }
+
+/* トップページ：発信にあたって */
+.hero-message { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; max-width: 570px; margin-top: 25px; padding: 17px 20px; border: 1px solid #ef7a84; border-left: 5px solid #ef5361; border-radius: 7px; background: #261b21; color: #fff; transition: background .2s, border-color .2s; }
+.hero-message:hover, .hero-message:focus-visible { background: #3a222a; border-color: #ffadb3; color: #fff; }
+.hero-message-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.hero-message-label { color: #ffadb3; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
+.hero-message-copy strong { font-size: clamp(17px, 2.8vw, 21px); line-height: 1.5; }
+.hero-message-detail { color: #e2cdd0; font-size: 13px; line-height: 1.5; }
+.hero-message-arrow { flex: 0 0 auto; color: #ffadb3; font-size: 25px; }
+.hero .hero-articles { margin: 16px 0 0; }
+@media (max-width: 480px) { .hero-message { padding: 15px 16px; gap: 10px; } .hero-message-detail { font-size: 12px; } }
