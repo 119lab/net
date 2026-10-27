@@ -692,3 +692,6 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .media-link, .media-back { display: inline-block; color: #ffadb3; font-size: 14px; font-weight: bold; }
 .media-back { margin-top: 30px; }
 @media (max-width: 480px) { .media-page { padding-top: 32px; } .media-specs div { grid-template-columns: 1fr; gap: 2px; } }
+
+/* サンプル・創刊準備の案内 */
+.page .sample-notice { margin: 0 0 24px; padding: 12px 16px; border-left: 3px solid #ff8991; border-radius: 3px; background: #302229; color: #f5e7e8; font-size: 14px; line-height: 1.7; }
