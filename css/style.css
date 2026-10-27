@@ -700,3 +700,22 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .social-section { padding: 24px 20px; }
 .social-section-title { margin: 0 0 14px; font-size: clamp(20px, 3vw, 25px); }
 .top-contact-notice { margin: 12px 20px; color: #d0d8e0; font-size: 13px; text-align: center; }
+
+/* コーナー説明と誌面へのリンク */
+.lab-description { margin: -8px 0 17px; color: #c5ced8; font-size: 13px; line-height: 1.6; }
+.magazine-intro-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.magazine-intro-links a { font-size: 14px; font-weight: 700; }
+
+/* トップページの送信準備中のお知らせ */
+.top-contact-notice { padding: 12px 16px; border-left: 3px solid #ff8991; border-radius: 4px; background: #302229; color: #f5e7e8; line-height: 1.7; text-align: left; }
+.article-index > .sample-notice { margin-top: 24px; }
+
+/* 全ページ共通フッター */
+.site-footer { margin-top: 36px; padding: 32px 0 22px; border-top: 1px solid var(--line); background: #0e1116; }
+.site-footer-inner { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 20px 30px; }
+.site-footer-brand a { font-size: 19px; font-weight: 800; letter-spacing: .03em; }
+.site-footer-brand p { margin: 4px 0 0; color: #abb5c0; font-size: 12px; }
+.site-footer-nav { display: flex; flex-wrap: wrap; gap: 10px 18px; max-width: 520px; }
+.site-footer-nav a { color: #d0d8e0; font-size: 13px; }
+.site-footer small { flex-basis: 100%; color: #abb5c0; font-size: 12px; }
+@media (max-width: 480px) { .site-footer-inner { flex-direction: column; gap: 16px; } .site-footer-nav { gap: 10px 16px; } }
