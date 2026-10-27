@@ -667,3 +667,28 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .hero-message-arrow { flex: 0 0 auto; color: #ffadb3; font-size: 25px; }
 .hero .hero-articles { margin: 16px 0 0; }
 @media (max-width: 480px) { .hero-message { padding: 15px 16px; gap: 10px; } .hero-message-detail { font-size: 12px; } }
+
+/* 広告・媒体資料 */
+.media-page { padding-top: 48px; padding-bottom: 72px; }
+.media-eyebrow { color: #ff8991; font-size: 12px; font-weight: 800; letter-spacing: .14em; }
+.media-heading { padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+.media-heading h1 { margin: 8px 0 24px; text-align: left; font-size: clamp(30px, 5vw, 40px); line-height: 1.3; }
+.media-heading h2 { font-size: clamp(22px, 3.8vw, 29px); }
+.media-page p { color: #d0d8e0; line-height: 1.85; }
+.media-panel { margin-top: 24px; padding: clamp(20px, 4vw, 30px); background: #151a21; border: 1px solid #58636e; border-top: 4px solid var(--red); border-radius: 7px; }
+.media-panel h2 { margin: 9px 0 16px; font-size: clamp(20px, 3.6vw, 27px); }
+.media-panel h3 { margin: 24px 0 8px; font-size: 18px; line-height: 1.5; }
+.media-feature { padding: 4px 0 10px; border-bottom: 1px solid var(--line); }
+.media-feature:last-child { border-bottom: 0; }
+.media-feature h3 span { color: #ff8991; margin-right: 8px; }
+.media-feature p { margin: 0 0 12px; }
+.media-specs { margin: 18px 0; border-top: 1px solid var(--line); }
+.media-specs div { display: grid; grid-template-columns: minmax(110px, 30%) 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.media-specs dt { color: #ffadb3; font-weight: bold; font-size: 14px; }
+.media-specs dd { margin: 0; color: #e1e7ec; font-size: 14px; overflow-wrap: anywhere; }
+.media-prices dd { font-weight: bold; font-size: 17px; }
+.media-page .media-note { font-size: 13px; }
+.media-notice { padding: 12px 16px; border-left: 3px solid #ff8991; background: #302229; }
+.media-link, .media-back { display: inline-block; color: #ffadb3; font-size: 14px; font-weight: bold; }
+.media-back { margin-top: 30px; }
+@media (max-width: 480px) { .media-page { padding-top: 32px; } .media-specs div { grid-template-columns: 1fr; gap: 2px; } }
