@@ -792,7 +792,7 @@ body.lightbox-open { overflow: hidden; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(7px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-7px) rotate(-45deg); }
-  .has-hamburger .mainnav { display: none; position: absolute; top: calc(100% + 10px); left: 0; right: 0; z-index: 1000; flex-direction: column; flex-wrap: nowrap; gap: 0; padding: 8px; border: 1px solid #334454; border-radius: 10px; background: #101820; box-shadow: 0 12px 28px rgba(0,0,0,.32); font-size: 15px; }
+  .has-hamburger .mainnav { display: none; position: absolute; top: calc(100% + 10px); left: auto; right: 0; width: 100%; max-width: 360px; z-index: 1000; flex-direction: column; flex-wrap: nowrap; gap: 0; padding: 8px; border: 1px solid #334454; border-radius: 10px; background: #101820; box-shadow: 0 12px 28px rgba(0,0,0,.32); font-size: 15px; }
   .has-hamburger .mainnav.is-open { display: flex; }
   .mainnav a { padding: 12px 14px; border-radius: 6px; }
   .mainnav a:hover, .mainnav a:focus-visible { background: #243442; }
