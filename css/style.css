@@ -787,7 +787,7 @@ body.lightbox-open { overflow: hidden; }
 }
 
 /* Shared review fixes */
-img[width][height] { height: auto; }
+img { height: auto; }
 .hero-message { max-width: 420px; padding: 10px 14px; margin-top: 18px; border-left-width: 2px; }
 .hero-message-copy strong { font-size: 16px; }
 .hero-message-detail { font-size: 12px; }
@@ -800,3 +800,8 @@ img[width][height] { height: auto; }
 
 .lightbox[hidden] { display: none; }
 .lightbox > img { max-width: 94vw; max-height: 85vh; transform: none; }
+
+/* Second review: narrow-screen header and reduced motion */
+.headrow { padding-inline: 20px; }
+.headrow .brand { min-width: 0; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .menu-toggle span { transition: none; } }
