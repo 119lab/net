@@ -26,7 +26,7 @@
         content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=20261028-fixes">
+  <link rel="stylesheet" href="css/style.css?v=20261028-ui-v5">
 
   <!-- Google Analytics 4 -->
   <script async
@@ -75,6 +75,7 @@
   
 
   <body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
     <header>
       <div class="wrap headrow">
         <a href="index.html" class="brand">
@@ -91,7 +92,7 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">FIRE SCIENCE & INNOVATION</div>
@@ -100,10 +101,7 @@
           現場の知恵と、新しい技術をつなぐ。<br />消防の未来を考える専門メディア。
         </p>
         <p class="hero-articles"><a class="action" href="article/article.html">最新記事を読む →</a></p>
-        <a class="hero-message" href="about/message.html">
-          <span class="hero-message-copy"><span class="hero-message-label">OUR MESSAGE</span><strong>発信にあたってのご挨拶</strong><span class="hero-message-detail">119LAB.に込めた想いをお伝えします。</span></span>
-          <span class="hero-message-arrow" aria-hidden="true">→</span>
-        </a>
+        <a class="hero-message-text" href="about/message.html">発信にあたってのご挨拶 →</a>
 
       </div>
     </section>
@@ -117,47 +115,38 @@
       <div class="lab-corner-grid">
         <a class="lab-corner-card" href="article/a001.html">
           <img height="675" width="1200" class="corner-card-thumb" src="article/images/001-kyukyuhansou01.webp" alt="救急活動とデジタル技術のイメージ" loading="lazy" decoding="async" />
-          <span class="lab-corner-number">01 / TECHNOLOGY</span>
           <h3>119<span>TECH</span></h3>
           <p>技術・装備・DX</p>
-          <span class="lab-description">現場を支える技術や装備を紹介します。</span>
-          <span class="lab-current-label">記事サンプル</span>
+          <span class="content-label content-label--sample">企画サンプル</span>
           <strong class="lab-current-title">救急DXで搬送時間を短縮</strong>
           <span class="lab-corner-link">記事を読む ↗</span>
         </a>
         <a class="lab-corner-card" href="article/a002.html">
           <img height="675" width="1200" class="corner-card-thumb" src="article/images/002-syokuin5mei.webp" alt="消防職員の声を聞くイメージ" loading="lazy" decoding="async" />
-          <span class="lab-corner-number">02 / VOICES</span>
           <h3>119<span>VOICE</span></h3>
           <p>現場の声・読者投稿</p>
-          <span class="lab-description">消防に携わる人々の声や経験を届けます。</span>
-          <span class="lab-current-label">記事サンプル</span>
+          <span class="content-label content-label--sample">企画サンプル</span>
           <strong class="lab-current-title">若手消防士５人に聞いた本音</strong>
           <span class="lab-corner-link">記事を読む ↗</span>
         </a>
         <a class="lab-corner-card" href="article/a003.html">
           <img height="941" width="1672" class="corner-card-thumb" src="article/images/water-distribution.webp" alt="放水による水分布の概念イラスト" loading="lazy" decoding="async" />
-          <span class="lab-corner-number">03 / RESEARCH</span>
           <h3>119<span>SCIENCE</span></h3>
           <p>科学・研究・論文</p>
-          <span class="lab-description">消防に役立つ研究や科学的な知見を紹介します。</span>
-          <span class="lab-current-label">文献レビュー・公開前原稿</span>
+          <span class="content-label content-label--review">文献レビュー</span>
           <strong class="lab-current-title">放水戦術を科学する</strong>
           <span class="lab-corner-link">記事を読む ↗</span>
         </a>
       </div>
-      <div class="lab-future-topics">
-        <h3>今後の企画例</h3>
-        <p>救助資機材、女性消防職員の声、延焼メカニズム、心肺蘇生の科学などを検討しています。掲載内容は変更になる場合があります。</p>
-      </div>
+
       <a class="lab-all-articles" href="article/article.html">最新記事一覧を見る →</a>
     </section>
 
     <section class="series-feature wrap" aria-labelledby="series-feature-title">
       <div class="series-feature-heading">
-        <span class="category">IRREGULAR SERIES</span>
-        <h2 id="series-feature-title">不定期連載｜ある消防士の大事なこと</h2>
-        <p>消防の仕事で大切にしたいことを、短いエピソードと一つの言葉で綴ります。</p><p class="sample-notice">連載サンプル：企画案として作成した読み物です。実話ではありません。</p>
+        <span class="content-label content-label--series">連載サンプル</span>
+        <h2 id="series-feature-title">ある消防士の大事なこと</h2>
+        <p>消防の仕事で大切にしたいことを綴る、不定期連載の企画案です。実話ではありません。</p>
       </div>
       <div class="series-feature-grid">
         <a href="series/episode-005.html"><img height="180" width="320" class="series-card-thumb" src="images/series-episode-005-thumb.webp" alt="経験を語り継ぐ消防士たちのイメージ" loading="lazy" decoding="async" /><span>第5回</span><strong>受け取ったものを、次へ</strong></a>
@@ -185,9 +174,9 @@
         <section class="social-section" aria-labelledby="social-title">
           <h2 id="social-title" class="social-section-title">SNS・動画</h2>
           <div class="sns simple-sns-links">
-            <a href="https://www.instagram.com/p/DevNvGij0_l/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-            <a href="https://x.com/shindenzumaster/status/2112777855809790377" target="_blank" rel="noopener noreferrer">X ↗</a>
-            <a href="https://youtube.com/@shindenzu.master" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+            <a href="https://www.instagram.com/p/DevNvGij0_l/" target="_blank" rel="noopener noreferrer">Instagramの投稿を見る ↗</a>
+            <a href="https://x.com/shindenzumaster/status/2112777855809790377" target="_blank" rel="noopener noreferrer">Xの投稿を見る ↗</a>
+            <a href="https://www.youtube.com/watch?v=OAZ4yfV-f9o" target="_blank" rel="noopener noreferrer">YouTubeの投稿を見る ↗</a>
           </div>
         </section>
 
@@ -212,9 +201,9 @@
           <a href="contact/contact.html">お問い合わせ</a>
           
                   <a href="video/video.html">動画</a>
-        </nav>
+        <a href="about/privacy.html">プライバシーポリシー</a></nav>
         <small>© 119 MEDIA / 119LAB.net</small>
       </div>
     </footer>
-  <script src="js/lightbox.js"></script></body>
+  <script src="js/lightbox.js?v=20261028-ui-v5"></script></body>
 </html>

@@ -2,6 +2,12 @@
   if (document.body.dataset.siteUiInitialized === 'true') return;
   document.body.dataset.siteUiInitialized = 'true';
 
+  const skipLink = document.querySelector('.skip-link');
+  if (skipLink) skipLink.addEventListener('click', function (event) {
+    const main = document.getElementById('main-content');
+    if (main) { event.preventDefault(); main.focus(); main.scrollIntoView({ block: 'start', behavior: 'instant' }); }
+  });
+
   const menus = document.querySelectorAll('header .mainnav');
   if (menus.length) document.body.classList.add('has-hamburger');
   menus.forEach(function (nav, index) {
@@ -22,7 +28,7 @@
     }
     button.addEventListener('click', function () { setOpen(button.getAttribute('aria-expanded') !== 'true'); });
     nav.addEventListener('click', function (event) { if (event.target.closest('a')) setOpen(false); });
-    document.addEventListener('keydown', function (event) { if (event.key === 'Escape') setOpen(false); });
+    document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { setOpen(false); button.focus(); } });
     document.addEventListener('click', function (event) { if (!nav.parentNode.contains(event.target)) setOpen(false); });
   });
 

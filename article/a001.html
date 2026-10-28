@@ -22,10 +22,11 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css?v=20261028-fixes" />
+    <link rel="stylesheet" href="../css/style.css?v=20261028-ui-v5" />
   </head>
 
   <body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
     <header>
       <div class="wrap headrow">
         <a href="../index.html" class="brand">
@@ -41,11 +42,11 @@
         </nav>
       </div>
     </header>
-    <main class="page article-detail">
-      <p class="sample-notice"><strong>記事サンプル</strong>：この記事は架空の事例や仮の表記を含むサンプルです。</p>
+    <main class="page article-detail" id="main-content" tabindex="-1"><nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li><a href="article.html">最新記事</a></li><li aria-current="page">救急DXで搬送時間を短縮</li></ol></nav>
+      <p class="sample-notice"><span class="content-label content-label--sample">企画サンプル</span>：この記事は架空の事例や仮の表記を含むサンプルです。</p>
       <div class="article-detail-heading">
         <div class="article-detail-meta"><span>119TECH</span><span>#001</span></div>
-        <h1>救急DXで搬送時間を短縮</h1>
+        <h1>救急DXで搬送時間を短縮</h1><p class="reading-time">読む目安：約3分</p>
       </div>
       <h2>架空市消防本部</h2>
 
@@ -84,7 +85,7 @@
         救急隊、医療機関、そして傷病者をつなぐ救急DX。デジタル技術の導入によって、救急搬送のあり方は少しずつ変わり始めています。
       </p>
 
-      <nav class="article-detail-nav" aria-label="記事ナビゲーション"><a href="article.html">← 最新記事一覧へ</a><a href="../index.html">トップページへ →</a></nav>
+      <aside class="related-articles" aria-labelledby="related-title"><h2 id="related-title">ほかの記事を読む</h2><ul><li><a href="a002.html"><span class="related-category">119VOICE</span><span class="content-label content-label--sample">企画サンプル</span><strong>若手消防士５人に聞いた本音 →</strong></a></li><li><a href="a003.html"><span class="related-category">119SCIENCE</span><span class="content-label content-label--review">文献レビュー</span><strong>放水戦術を科学する →</strong></a></li></ul><a class="related-series" href="../series/index.html">連載「ある消防士の大事なこと」を読む →</a></aside><nav class="article-detail-nav" aria-label="記事ナビゲーション"><a href="article.html">← 最新記事一覧へ</a><a href="../index.html">トップページへ →</a></nav>
     </main>
     <footer class="site-footer">
       <div class="wrap site-footer-inner">
@@ -97,9 +98,9 @@
           <a href="../contact/contact.html">お問い合わせ</a>
           
                   <a href="../video/video.html">動画</a>
-        </nav>
+        <a href="../about/privacy.html">プライバシーポリシー</a></nav>
         <small>© 119 MEDIA / 119LAB.net</small>
       </div>
     </footer>
-  <script src="../js/lightbox.js"></script></body>
+  <script src="../js/lightbox.js?v=20261028-ui-v5"></script></body>
 </html>

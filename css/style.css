@@ -725,7 +725,6 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .top-contact-notice { margin: 12px 20px; color: #d0d8e0; font-size: 13px; text-align: center; }
 
 /* コーナー説明と誌面へのリンク */
-.lab-description { margin: -8px 0 17px; color: #c5ced8; font-size: 13px; line-height: 1.6; }
 .magazine-intro-links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .magazine-intro-links a { font-size: 14px; font-weight: 700; }
 
@@ -805,3 +804,55 @@ img { height: auto; }
 .headrow { padding-inline: 20px; }
 .headrow .brand { min-width: 0; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .menu-toggle span { transition: none; } }
+
+/* Compact top cards and article navigation */
+.lab-corner-card p { margin-bottom: 10px; }
+.lab-corner-card h3 { margin-top: 10px; }
+.lab-current-title { margin-bottom: 12px; }
+.breadcrumbs { margin: 0 0 22px; color: var(--muted); font-size: 12px; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 4px 8px; margin: 0; padding: 0; list-style: none; }
+.breadcrumbs li + li::before { content: "›"; margin-right: 8px; color: var(--muted); }
+.breadcrumbs a { color: #ffadb3; text-decoration: underline; text-underline-offset: 3px; }
+.article-detail .breadcrumbs ol li + li { margin-top: 0; }
+.article-detail .reading-time { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+.article-detail { font-size: 17px; }
+.related-articles { margin-top: 36px; padding: 20px; background: var(--panel); border: 1px solid var(--line); border-radius: 7px; }
+.related-articles h2 { margin: 0 0 16px; font-size: 20px; }
+.related-articles ul { margin: 0; padding: 0; list-style: none; }
+.related-articles li + li { border-top: 1px solid var(--line); }
+.related-articles li a { display: block; padding: 14px 0; }
+.related-articles span { display: block; color: var(--muted); font-size: 12px; }
+.related-articles strong { display: block; font-size: 16px; }
+.related-series { display: inline-block; margin-top: 16px; color: #ffadb3; font-size: 14px; }
+.series-pagination { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,180px),1fr)); gap: 16px; }
+.series-pagination a { display: flex; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: 6px; }
+@media (max-width: 480px) { .article-detail { font-size: 16px; } }
+
+.lab-corner-card { min-height: 0; padding: 18px 16px 16px; }
+@media (prefers-reduced-motion: reduce) { .lab-corner-card { transition: none; } a.lab-corner-card:hover, a.lab-corner-card:focus-visible { transform: none; } }
+
+.privacy-page { font-size: 16px; overflow-wrap: anywhere; }
+.privacy-page h1 { font-size: clamp(25px,5vw,34px); line-height: 1.5; }
+.privacy-page section { margin-top: 30px; }
+.privacy-page h2 { font-size: 20px; }
+.privacy-page section a { color: #ffadb3; text-decoration: underline; text-underline-offset: 3px; }
+.privacy-date { color: var(--muted); font-size: 13px; }
+
+/* Compact navigation and consistent content labels */
+.hero { padding-top: 48px; padding-bottom: 40px; }
+.hero .hero-articles { margin-bottom: 10px; }
+.hero-message-text { display: inline-block; padding-block: 6px; font-size: 14px; color: #ffadb3; text-decoration: underline; text-underline-offset: 4px; }
+.content-label { display: inline-block; flex: 0 0 auto; width: fit-content; padding: 2px 8px; border: 1px solid #718191; border-radius: 4px; background: #24303c; color: #e6edf4; font-size: 11px; font-weight: 700; line-height: 1.6; vertical-align: middle; }
+.related-articles .content-label { display: inline-block; color: #e6edf4; font-size: 11px; }
+.article-card-meta { flex-wrap: wrap; align-items: center; gap: 8px; }
+.article-detail-meta { flex-wrap: wrap; }
+.sample-notice .content-label { margin-right: 5px; }
+.series-feature-heading > .content-label { margin-bottom: 8px; }
+.skip-link { position: fixed; top: 8px; left: 12px; z-index: 10000; padding: 12px 18px; border-radius: 6px; background: #f5f7fa; color: #101419; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); color: #101419; }
+#main-content:focus { outline: none; }
+@media (max-width: 600px) {
+  .site-footer-nav { flex-direction: column; flex-wrap: nowrap; align-items: stretch; width: 100%; gap: 0; }
+  .site-footer-nav a { display: flex; align-items: center; min-height: 44px; padding: 10px 4px; border-bottom: 1px solid var(--line); }
+  .hero { padding-top: 36px; padding-bottom: 28px; }
+}

@@ -22,10 +22,11 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css?v=20261028-fixes" />
+    <link rel="stylesheet" href="../css/style.css?v=20261028-ui-v5" />
   </head>
 
   <body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
     <header>
       <div class="wrap headrow">
         <a href="../index.html" class="brand">
@@ -41,7 +42,7 @@
         </nav>
       </div>
     </header>
-    <main class="page about-page">
+    <main class="page about-page" id="main-content" tabindex="-1"><nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-current="page">119LAB.について</li></ol></nav>
       <div class="about-hero">
         <span class="about-eyebrow">ABOUT 119LAB.</span>
         <h1>119LAB.について</h1>
@@ -82,7 +83,11 @@
         <a class="about-link" href="message.html">発信にあたってのご挨拶 →</a>
       </section>
       <a class="about-back" href="../index.html">← トップに戻る</a>
-    </main>
+          <section class="about-section" aria-labelledby="future-topics-title">
+        <h2 id="future-topics-title">今後の企画例</h2>
+        <p>救助資機材、女性消防職員の声、延焼メカニズム、心肺蘇生の科学などを検討しています。掲載内容は変更になる場合があります。</p>
+      </section>
+</main>
     <footer class="site-footer">
       <div class="wrap site-footer-inner">
         <div class="site-footer-brand"><a href="../index.html">119LAB.net</a><p>消防を科学する。</p></div>
@@ -94,9 +99,9 @@
           <a href="../contact/contact.html">お問い合わせ</a>
           
                   <a href="../video/video.html">動画</a>
-        </nav>
+        <a href="../about/privacy.html">プライバシーポリシー</a></nav>
         <small>© 119 MEDIA / 119LAB.net</small>
       </div>
     </footer>
-  <script src="../js/lightbox.js"></script></body>
+  <script src="../js/lightbox.js?v=20261028-ui-v5"></script></body>
 </html>
