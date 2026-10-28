@@ -675,20 +675,6 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .series-episode-card { border-left-color: #ef9bb8; }
 .series-episode-card h3 { margin: 12px 0 6px; color: var(--white); font-size: clamp(18px, 3vw, 22px); line-height: 1.5; }
 @media (max-width: 700px) { .series-feature-grid { grid-template-columns: 1fr; } }
-.series-feature { margin: 0 auto 36px; padding: clamp(20px, 4vw, 30px); border: 1px solid var(--line); border-top: 4px solid #ef9bb8; border-radius: 7px; background: #151a21; }
-.series-feature-heading h2, .series-index-heading h2 { margin: 8px 0; color: var(--white); font-size: clamp(21px, 3.5vw, 28px); line-height: 1.5; }
-.series-feature-heading p, .series-index-heading p { margin: 0; color: #c5ced8; line-height: 1.8; }
-.series-feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
-.series-feature-grid a { display: block; padding: 16px; border: 1px solid #58636e; border-radius: 6px; color: var(--white); background: #10151b; }
-.series-feature-grid a:hover, .series-feature-grid a:focus-visible { border-color: #ef9bb8; color: var(--white); }
-.series-feature-grid span { display: block; margin-bottom: 6px; color: #ffadb3; font-size: 12px; font-weight: 700; }
-.series-feature-grid strong { display: block; font-size: 15px; line-height: 1.6; }
-.series-feature-link { display: inline-block; margin-top: 18px; color: #ffadb3; font-size: 14px; font-weight: 700; }
-.series-index-panel { margin-top: 38px; padding: clamp(20px, 4vw, 30px); border: 1px solid var(--line); border-top: 4px solid #ef9bb8; border-radius: 7px; background: #12171d; }
-.series-episode-list { display: grid; gap: 12px; margin-top: 18px; }
-.series-episode-card { border-left-color: #ef9bb8; }
-.series-episode-card h3 { margin: 12px 0 6px; color: var(--white); font-size: clamp(18px, 3vw, 22px); line-height: 1.5; }
-@media (max-width: 700px) { .series-feature-grid { grid-template-columns: 1fr; } }
 .magazine-intro-cover-wrap { flex: 0 0 200px; width: 200px; }
 .magazine-intro-cover-wrap .magazine-intro-cover { width: 100%; }
 .magazine-status { display: block; margin-top: 7px; color: #c5ced8; font-size: 11px; line-height: 1.5; text-align: center; }
@@ -799,3 +785,18 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 760px) {
   .brand img { width: min(190px, 56vw); }
 }
+
+/* Shared review fixes */
+img[width][height] { height: auto; }
+.hero-message { max-width: 420px; padding: 10px 14px; margin-top: 18px; border-left-width: 2px; }
+.hero-message-copy strong { font-size: 16px; }
+.hero-message-detail { font-size: 12px; }
+.article-toc, .article-summary { margin-block: 24px; padding: 18px 22px; border: 1px solid var(--line); border-radius: 7px; }
+.article-toc h2, .article-summary h2 { margin-top: 0; font-size: 1.15rem; }
+.article-toc li { margin-block: 7px; }
+.article-detail [id] { scroll-margin-top: 24px; }
+.zoomable:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #ffadb3; outline-offset: 4px; }
+.series-feature-grid:has(> a:only-child) { grid-template-columns: 1fr; }
+
+.lightbox[hidden] { display: none; }
+.lightbox > img { max-width: 94vw; max-height: 85vh; transform: none; }

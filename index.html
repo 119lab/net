@@ -26,7 +26,7 @@
         content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=20261028-menu-right-v3">
+  <link rel="stylesheet" href="css/style.css?v=20261028-fixes">
 
   <!-- Google Analytics 4 -->
   <script async
@@ -53,36 +53,7 @@
     })(window,document,"clarity","script","z3lvkzeb1r");
   </script>
 
-  <!-- SNSはPC幅に応じて2列／3列、スマホは1列で表示 -->
-  <style id="sns-responsive-layout">
-    section.sns {
-      display: grid !important;
-      grid-template-columns: minmax(0, 1fr) !important;
-      width: 100%;
-      max-width: 100%;
-      margin: 32px 0;
-      margin-left: 0;
-      transform: none;
-      gap: 32px;
-    }
-    section.sns > .sns-item { min-width: 0; width: 100%; }
-    @media (min-width: 900px), (orientation: landscape) {
-      section.sns {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        align-items: start;
-        width: 100%;
-        max-width: 100%;
-        margin: 32px 0;
-        margin-left: 0;
-        transform: none;
-        gap: 24px;
-      }
-    }
-    @media (min-width: 1100px) {
-      section.sns { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
-    }
-  </style>
-  <style id="menu-right-fix">
+<style id="menu-right-fix">
 /* ヘッダーの右寄せ。JSがハンバーガーを有効にした場合は全画面幅で適用 */
 .headrow { position: relative; flex-direction: row !important; align-items: center !important; justify-content: space-between; }
 .mainnav { margin-left: auto; justify-content: flex-end; }
@@ -107,12 +78,12 @@
     <header>
       <div class="wrap headrow">
         <a href="index.html" class="brand">
-          <img src="images/119labnet_rogo.webp" alt="119LAB.net" />
+          <img height="126" width="603" src="images/119labnet_rogo.webp" alt="119LAB.net" />
           <p>消防を科学する。｜消防専門メディア</p></a
         >
         <nav class="mainnav" aria-label="メインメニュー">
           <a href="article/article.html">最新記事</a>
-          <a href="/net/video/video.html">動画</a>
+          <a href="video/video.html">動画</a>
           <a href="magazine/magazine.html">フリーペーパー</a>
           <a href="about/about.html">サイトについて</a>
           <a href="contact/contact.html">お問い合わせ</a>
@@ -127,11 +98,12 @@
         <p>
           現場の知恵と、新しい技術をつなぐ。<br />消防の未来を考える専門メディア。
         </p>
+        <p class="hero-articles"><a class="action" href="article/article.html">最新記事を読む →</a></p>
         <a class="hero-message" href="about/message.html">
           <span class="hero-message-copy"><span class="hero-message-label">OUR MESSAGE</span><strong>発信にあたってのご挨拶</strong><span class="hero-message-detail">119LAB.に込めた想いをお伝えします。</span></span>
           <span class="hero-message-arrow" aria-hidden="true">→</span>
         </a>
-        <p class="hero-articles"><a class="action" href="article/article.html">最新記事を読む ↓</a></p>
+
       </div>
     </section>
 
@@ -143,7 +115,7 @@
       </div>
       <div class="lab-corner-grid">
         <a class="lab-corner-card" href="article/a001.html">
-          <img class="corner-card-thumb" src="article/images/001-kyukyuhansou01.webp" alt="救急活動とデジタル技術のイメージ" loading="lazy" decoding="async" />
+          <img height="675" width="1200" class="corner-card-thumb" src="article/images/001-kyukyuhansou01.webp" alt="救急活動とデジタル技術のイメージ" loading="lazy" decoding="async" />
           <span class="lab-corner-number">01 / TECHNOLOGY</span>
           <h3>119<span>TECH</span></h3>
           <p>技術・装備・DX</p>
@@ -153,7 +125,7 @@
           <span class="lab-corner-link">記事を読む ↗</span>
         </a>
         <a class="lab-corner-card" href="article/a002.html">
-          <img class="corner-card-thumb" src="article/images/002-syokuin5mei.webp" alt="消防職員の声を聞くイメージ" loading="lazy" decoding="async" />
+          <img height="675" width="1200" class="corner-card-thumb" src="article/images/002-syokuin5mei.webp" alt="消防職員の声を聞くイメージ" loading="lazy" decoding="async" />
           <span class="lab-corner-number">02 / VOICES</span>
           <h3>119<span>VOICE</span></h3>
           <p>現場の声・読者投稿</p>
@@ -163,12 +135,12 @@
           <span class="lab-corner-link">記事を読む ↗</span>
         </a>
         <a class="lab-corner-card" href="article/a003.html">
-          <img class="corner-card-thumb" src="article/images/water-distribution.webp" alt="放水による水分布の概念イラスト" loading="lazy" decoding="async" />
+          <img height="941" width="1672" class="corner-card-thumb" src="article/images/water-distribution.webp" alt="放水による水分布の概念イラスト" loading="lazy" decoding="async" />
           <span class="lab-corner-number">03 / RESEARCH</span>
           <h3>119<span>SCIENCE</span></h3>
           <p>科学・研究・論文</p>
           <span class="lab-description">消防に役立つ研究や科学的な知見を紹介します。</span>
-          <span class="lab-current-label">記事サンプル</span>
+          <span class="lab-current-label">文献レビュー・公開前原稿</span>
           <strong class="lab-current-title">放水戦術を科学する</strong>
           <span class="lab-corner-link">記事を読む ↗</span>
         </a>
@@ -184,17 +156,17 @@
       <div class="series-feature-heading">
         <span class="category">IRREGULAR SERIES</span>
         <h2 id="series-feature-title">不定期連載｜ある消防士の大事なこと</h2>
-        <p>消防の仕事で大切にしたいことを、短いエピソードと一つの言葉で綴ります。</p>
+        <p>消防の仕事で大切にしたいことを、短いエピソードと一つの言葉で綴ります。</p><p class="sample-notice">連載サンプル：企画案として作成した読み物です。実話ではありません。</p>
       </div>
       <div class="series-feature-grid">
-        <a href="series/episode-005.html"><img class="series-card-thumb" src="images/series-episode-005.png" alt="経験を語り継ぐ消防士たちのイメージ" loading="lazy" decoding="async" /><span>第5回</span><strong>受け取ったものを、次へ</strong></a>
+        <a href="series/episode-005.html"><img height="180" width="320" class="series-card-thumb" src="images/series-episode-005-thumb.webp" alt="経験を語り継ぐ消防士たちのイメージ" loading="lazy" decoding="async" /><span>第5回</span><strong>受け取ったものを、次へ</strong></a>
       </div>
       <a class="series-feature-link" href="series/index.html">連載一覧を見る →</a>
     </section>
 
     <section class="magazine-intro wrap" aria-labelledby="magazine-intro-title">
       <div class="magazine-intro-cover-wrap">
-        <img class="magazine-intro-cover" src="about/images/2027001.webp" alt="フリーペーパー119LAB. 創刊号の表紙イメージ" />
+        <img height="842" width="595" class="magazine-intro-cover" src="about/images/2027001.webp" alt="フリーペーパー119LAB. 創刊号の表紙イメージ" />
         <span class="magazine-status">創刊準備中・表紙イメージ</span>
       </div>
       <div class="magazine-intro-text">
@@ -237,7 +209,7 @@
           <a href="contact/media_kit.html">広告・媒体資料</a>
           <a href="contact/contact.html">お問い合わせ</a>
           
-                  <a href="/net/video/video.html">動画</a>
+                  <a href="video/video.html">動画</a>
         </nav>
         <small>© 119 MEDIA / 119LAB.net</small>
       </div>

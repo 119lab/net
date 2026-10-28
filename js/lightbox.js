@@ -26,15 +26,54 @@
     document.addEventListener('click', function (event) { if (!nav.parentNode.contains(event.target)) setOpen(false); });
   });
 
-  const images = document.querySelectorAll('img:not(.brand img)');
+  // Only standalone article figures are expandable. Linked thumbnails keep navigation.
+  const images = Array.from(document.querySelectorAll('.article-figure img, .series-hero img')).filter(img => !img.closest('a'));
   if (!images.length) return;
   const overlay = document.createElement('div');
   overlay.className = 'lightbox';
-  overlay.innerHTML = '<button class="lightbox-close" aria-label="画像を閉じる">×</button><img alt=""><p>画像をクリックすると閉じます</p>';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', '画像の拡大表示');
+  overlay.hidden = true;
+  overlay.innerHTML = '<button type="button" class="lightbox-close" aria-label="画像を閉じる">×</button><img alt=""><p>画像または背景を押すと閉じます</p>';
   document.body.appendChild(overlay);
   const large = overlay.querySelector('img');
-  function close() { overlay.classList.remove('is-open'); document.body.classList.remove('lightbox-open'); }
-  images.forEach(function (img) { img.classList.add('zoomable'); img.addEventListener('click', function () { large.src = img.currentSrc || img.src; large.alt = img.alt || ''; overlay.classList.add('is-open'); document.body.classList.add('lightbox-open'); }); });
-  overlay.addEventListener('click', function (e) { if (e.target === overlay || e.target === large || e.target.classList.contains('lightbox-close')) close(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  const closeButton = overlay.querySelector('button');
+  let trigger = null;
+  const inertNodes = [];
+  function close() {
+    overlay.classList.remove('is-open'); overlay.hidden = true;
+    document.body.classList.remove('lightbox-open');
+    inertNodes.splice(0).forEach(node => { node.inert = false; });
+    if (trigger) trigger.focus();
+  }
+  function open(img) {
+    trigger = img;
+    large.src = img.currentSrc || img.src; large.alt = img.alt || '';
+    overlay.hidden = false; overlay.classList.add('is-open');
+    document.body.classList.add('lightbox-open');
+    Array.from(document.body.children).forEach(node => {
+      if (node !== overlay && !node.inert && node.tagName !== 'SCRIPT') {
+        node.inert = true; inertNodes.push(node);
+      }
+    });
+    closeButton.focus();
+  }
+  images.forEach(function (img) {
+    img.classList.add('zoomable'); img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', (img.alt || '画像') + 'を拡大');
+    img.setAttribute('aria-haspopup', 'dialog');
+    img.addEventListener('click', () => open(img));
+    img.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(img); }
+    });
+  });
+  overlay.addEventListener('click', function (event) {
+    if (event.target === overlay || event.target === large || event.target === closeButton) close();
+  });
+  overlay.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') { event.stopPropagation(); close(); }
+    if (event.key === 'Tab') { event.preventDefault(); closeButton.focus(); }
+  });
 })();
