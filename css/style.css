@@ -889,3 +889,6 @@ img { height: auto; }
 .news-panel-heading .category { color: #ef9bb8; font-weight: 700; letter-spacing: .08em; }
 .news-item { margin: 0; color: #d8dee7; line-height: 1.7; }
 @media (max-width: 640px) { .news-panel { padding: 18px; } .news-panel-heading { display: block; } .news-panel-heading h2 { margin-top: 4px; } }
+
+/* NEWS uses the same accent as TECH / VOICE / SCIENCE. */
+.news-panel-heading h2 span { color: #ff8991; }
