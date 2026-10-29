@@ -93,11 +93,15 @@
       </div>
     </section>
 
-    <div id="common-news"><p class="wrap" role="status">お知らせを読み込んでいます。</p></div>
+    <section class="news-panel wrap" aria-labelledby="news-title">
+      <div class="news-panel-heading"><span class="category">お知らせ</span><h2 id="news-title">119<span style="color: #ff8991;">NEWS</span></h2></div>
+      <div id="common-news"><p role="status">お知らせを読み込んでいます。</p></div>
+      <noscript><p>お知らせの表示にはJavaScriptを有効にしてください。</p></noscript>
+    </section>
     <script>
-      fetch("/net/parts/news.html")
+      fetch("parts/news.html")
         .then(response => {
-          if (!response.ok) throw new Error("NEWSの読み込み失敗");
+          if (!response.ok) throw new Error("お知らせの読み込み失敗");
           return response.text();
         })
         .then(html => {
@@ -105,10 +109,9 @@
         })
         .catch(error => {
           console.error(error);
-          document.getElementById("common-news").innerHTML = '<p class="wrap" role="status">お知らせを読み込めませんでした。時間をおいて再読み込みしてください。</p>';
+          document.getElementById("common-news").innerHTML = '<p role="status">お知らせを読み込めませんでした。時間をおいて再読み込みしてください。</p>';
         });
     </script>
-    <noscript><p class="wrap">お知らせの表示にはJavaScriptを有効にしてください。</p></noscript>
 
     <!-- 119LAB.net の3つの専門コーナー -->
     <section class="lab-corners wrap" aria-labelledby="lab-corners-title">
