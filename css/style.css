@@ -671,7 +671,10 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .series-feature-grid strong { display: block; font-size: 15px; line-height: 1.6; }
 .series-feature-link { display: inline-block; margin-top: 18px; color: #ffadb3; font-size: 14px; font-weight: 700; }
 .series-index-panel { margin-top: 38px; padding: clamp(20px, 4vw, 30px); border: 1px solid var(--line); border-top: 4px solid #ef9bb8; border-radius: 7px; background: #12171d; }
-.series-episode-list { display: grid; gap: 12px; margin-top: 18px; }
+.series-episode-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+
+@media (max-width: 900px) { .series-episode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .series-episode-list { grid-template-columns: 1fr; } }
 .series-episode-card { border-left-color: #ef9bb8; }
 .series-episode-card h3 { margin: 12px 0 6px; color: var(--white); font-size: clamp(18px, 3vw, 22px); line-height: 1.5; }
 @media (max-width: 700px) { .series-feature-grid { grid-template-columns: 1fr; } }
@@ -882,3 +885,28 @@ img { height: auto; }
 .recruit-work-grid h3 { color:#ffadb3; font-size:18px; }
 .faq-page,.recruit-page { overflow-wrap:anywhere; }
 @media(max-width:600px) { .recruit-work-grid { grid-template-columns:1fr; gap:0; } .faq-item summary { padding:16px; } .faq-answer { padding-inline:16px; } }
+
+.article-index .series-name { margin: 0 0 8px; color: #f5f7fa; font-size: clamp(22px, 3vw, 34px); font-weight: 800; letter-spacing: .04em; }
+
+/* 最新記事ページのカード間隔を整理 */
+.article-index .article-list { gap: 8px; }
+.article-index .article-list .article-card { padding-top: 16px; padding-bottom: 16px; }
+.article-index .series-index-panel { margin-top: 20px; }
+
+/* Latest installment marker and compact, consistent series cards */
+.series-latest { display: inline-block; margin-left: 6px; padding: 2px 7px; border-radius: 999px; background: #ef9bb8; color: #171a22; font-size: .72em; font-style: normal; font-weight: 700; vertical-align: middle; }
+.series-feature-grid { align-items: stretch; }
+@media (max-width: 640px) { .series-feature-grid { grid-template-columns: 1fr; } }
+
+.series-count { margin: 4px 0 0; color: #ef9bb8; font-weight: 700; }
+
+.series-count { margin: 4px 0 0; color: #ef9bb8; font-weight: 700; }
+
+@media (max-width: 640px) { .series-feature-heading h2, .article-index-heading h1, .article-detail h1 { font-size: clamp(22px, 7vw, 30px); line-height: 1.35; } .series-feature-heading p, .article-index-lead, .article-detail p { line-height: 1.75; } .breadcrumbs { font-size: 13px; } }
+
+.news-panel { margin-top: 24px; padding: 22px 24px; border: 1px solid var(--line); border-top: 4px solid #ef9bb8; border-radius: 8px; background: var(--panel); }
+.news-panel-heading { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+.news-panel-heading h2 { margin: 0; color: var(--white); font-size: clamp(20px, 3vw, 26px); letter-spacing: .04em; }
+.news-panel-heading .category { color: #ef9bb8; font-weight: 700; letter-spacing: .08em; }
+.news-item { margin: 0; color: #d8dee7; line-height: 1.7; }
+@media (max-width: 640px) { .news-panel { padding: 18px; } .news-panel-heading { display: block; } .news-panel-heading h2 { margin-top: 4px; } }
