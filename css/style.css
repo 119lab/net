@@ -54,13 +54,7 @@ header {
   padding-inline: 20px;
   margin-inline: auto;
 }
-.headrow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  padding: 16px 0;
-}
+
 .brand img {
   width: 215px;
   max-height: 75px;
@@ -72,17 +66,7 @@ header {
   font-size: 12px;
   margin: 0;
 }
-.mainnav {
-  display: flex;
-  gap: 19px;
-  flex-wrap: wrap;
-  font-size: 13px;
-  font-weight: 700;
-}
-.mainnav a {
-  white-space: nowrap;
-}
-.menu-toggle { display: none; }
+
 .hero {
   padding: 76px 0 72px;
   background: transparent; /* 文字周囲の半透明オーバーレイを削除 */
@@ -429,13 +413,7 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 
 /* 900px未満でも横向きならPC向けレイアウト */
 @media (width < 900px) and (orientation: portrait) {
-.headrow {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .mainnav {
-    gap: 12px 18px;
-  }
+
   .hero {
     padding: 55px 0;
   }
@@ -456,9 +434,7 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 .brand img {
     width: 190px;
   }
-  .mainnav {
-    font-size: 12px;
-  }
+
   .hero {
     padding: 43px 0;
     background-position: center;
@@ -772,9 +748,13 @@ body.lightbox-open { overflow: hidden; }
 .pdf-thumb-link { display: inline-flex; align-items: center; gap: 12px; }
 .pdf-thumb-link img { width: 58px; height: 82px; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
 
-/* ヘッダーの右寄せ。JSがハンバーガーを有効にした場合は全画面幅で適用 */
-.headrow { position: relative; flex-direction: row !important; align-items: center !important; justify-content: space-between; }
-.mainnav { margin-left: auto; justify-content: flex-end; }
+/* 共通ヘッダー・メニュー：レイアウト指定を集約 */
+.headrow { display: flex; position: relative; flex-direction: row; align-items: center; justify-content: space-between; gap: 22px; padding: 16px 20px; }
+.headrow .brand { min-width: 0; }
+.mainnav { display: flex; gap: 19px; flex-wrap: wrap; font-size: 13px; font-weight: 700; margin-left: auto; justify-content: flex-end; }
+.mainnav a { white-space: nowrap; }
+.menu-toggle { display: none; }
+
 .has-hamburger .menu-toggle { display: inline-flex; width: 44px; height: 44px; flex: 0 0 44px; margin-left: auto; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid #607080; border-radius: 8px; background: #17212b; cursor: pointer; }
 .menu-toggle span { display: block; width: 21px; height: 2px; border-radius: 2px; background: #fff; transition: transform .18s ease, opacity .18s ease; }
 .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(7px) rotate(45deg); }
@@ -804,8 +784,7 @@ img { height: auto; }
 .lightbox > img { max-width: 94vw; max-height: 85vh; transform: none; }
 
 /* Second review: narrow-screen header and reduced motion */
-.headrow { padding-inline: 20px; }
-.headrow .brand { min-width: 0; }
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .menu-toggle span { transition: none; } }
 
 /* Compact top cards and article navigation */
