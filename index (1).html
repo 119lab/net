@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ja">
+  
+<head>
+  <meta charset="UTF-8">
+    <!-- 検索・SNS共有設定 -->
+    <title>119LAB.net｜消防を科学する。専門メディア</title>
+    <meta name="description" content="消防・救急・救助・予防・通信指令の知識と技術をつなぐ消防専門メディア。" />
+    <link rel="canonical" href="https://119lab.github.io/net/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="119LAB.net" />
+    <meta property="og:title" content="119LAB.net｜消防を科学する。専門メディア" />
+    <meta property="og:description" content="消防・救急・救助・予防・通信指令の知識と技術をつなぐ消防専門メディア。" />
+    <meta property="og:url" content="https://119lab.github.io/net/" />
+    <meta property="og:image" content="https://119lab.github.io/net/images/ogp.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="631" />
+    <meta property="og:image:alt" content="119LAB.net 消防を科学する" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="119LAB.net｜消防を科学する。専門メディア" />
+    <meta name="twitter:description" content="消防・救急・救助・予防・通信指令の知識と技術をつなぐ消防専門メディア。" />
+    <meta name="twitter:image" content="https://119lab.github.io/net/images/ogp.webp" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css?v=20261029-menu-clean">
+
+  <!-- Google Analytics 4 -->
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-Y5XK34EEF5">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y5XK34EEF5');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){
+        (c[a].q=c[a].q||[]).push(arguments)
+      };
+      t=l.createElement(r);
+      t.async=1;
+      t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","z3lvkzeb1r");
+  </script>
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+</head>
+
+  
+
+  <body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+    <header>
+      <div class="wrap headrow">
+        <a href="index.html" class="brand">
+          <img height="126" width="603" src="images/119labnet_rogo.webp" alt="119LAB.net" />
+          <p>消防を科学する。｜消防専門メディア</p></a>
+        <nav class="mainnav" aria-label="メインメニュー">
+          <a href="article/article.html">最新記事</a><a href="series/index.html">連載</a>
+          <a href="video/video.html">動画</a>
+          <a href="magazine/magazine.html">フリーペーパー</a>
+          <a href="about/about.html">サイトについて</a>
+          <a href="contact/contact.html">お問い合わせ</a>
+        <a href="faq/faq.html">よくあるご質問</a>
+<a href="recruit/recruit.html">制作協力・執筆のご案内</a>
+</nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">FIRE SCIENCE & INNOVATION</div>
+        <h1>消防を科学する。</h1>
+        <p>
+          現場の知恵と、新しい技術をつなぐ。<br />消防の未来を考える専門メディア。
+        </p>
+        <p class="hero-articles"><a class="action" href="article/article.html">最新記事を読む →</a></p>
+        <a class="hero-message-text" href="about/message.html">発信にあたってのご挨拶 →</a>
+
+      </div>
+    </section>
+
+    <div id="common-news"><p class="wrap" role="status">お知らせを読み込んでいます。</p></div>
+    <script>
+      fetch("/net/parts/news.html")
+        .then(response => {
+          if (!response.ok) throw new Error("NEWSの読み込み失敗");
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById("common-news").innerHTML = html;
+        })
+        .catch(error => {
+          console.error(error);
+          document.getElementById("common-news").innerHTML = '<p class="wrap" role="status">お知らせを読み込めませんでした。時間をおいて再読み込みしてください。</p>';
+        });
+    </script>
+    <noscript><p class="wrap">お知らせの表示にはJavaScriptを有効にしてください。</p></noscript>
+
+    <!-- 119LAB.net の3つの専門コーナー -->
+    <section class="lab-corners wrap" aria-labelledby="lab-corners-title">
+      <div class="lab-corners-heading">
+        <span class="category">EXPLORE 119LAB.net</span>
+        <h2 id="lab-corners-title">消防の今と未来を、3つの視点から。</h2>
+      </div>
+      <div class="lab-corner-grid">
+        <a class="lab-corner-card" href="article/a001.html">
+          <img height="675" width="1200" class="corner-card-thumb" src="article/images/001-kyukyuhansou01.webp" alt="救急活動とデジタル技術のイメージ" loading="lazy" decoding="async" />
+          <h3>119<span>TECH</span></h3>
+          <p>技術・装備・DX</p>
+          <span class="content-label content-label--sample">企画サンプル</span>
+          <strong class="lab-current-title">救急DXで搬送時間を短縮</strong>
+          
+        </a>
+        <a class="lab-corner-card" href="article/a002.html">
+          <img height="675" width="1200" class="corner-card-thumb" src="article/images/002-syokuin5mei.webp" alt="消防職員の声を聞くイメージ" loading="lazy" decoding="async" />
+          <h3>119<span>VOICE</span></h3>
+          <p>現場の声・読者投稿</p>
+          <span class="content-label content-label--sample">企画サンプル</span>
+          <strong class="lab-current-title">若手消防士５人に聞いた本音</strong>
+          
+        </a>
+        <a class="lab-corner-card" href="article/a003.html">
+          <img height="941" width="1672" class="corner-card-thumb" src="article/images/water-distribution.webp" alt="放水による水分布の概念イラスト" loading="lazy" decoding="async" />
+          <h3>119<span>SCIENCE</span></h3>
+          <p>科学・研究・論文</p>
+          <span class="content-label content-label--review">文献レビュー</span>
+          <strong class="lab-current-title">放水戦術を科学する</strong>
+          
+        </a>
+      </div>
+
+      <p class="content-status-note">企画サンプルは架空の事例を含みます。文献レビューは公開前原稿です。</p>
+      <a class="lab-all-articles" href="article/article.html">最新記事一覧を見る →</a>
+    </section>
+
+    <section class="series-feature wrap" aria-labelledby="series-feature-title">
+      <div class="series-feature-heading">
+        
+        <h2 id="series-feature-title">ある消防士が大事にしていること</h2>
+        <p>消防の仕事で大切にしたいことを、短いエピソードと一つの言葉で綴る不定期連載です。</p>
+      </div>
+      <div class="series-feature-grid">
+        <a href="series/episode-005.html"><img height="180" width="320" class="series-card-thumb" src="images/series-episode-005-thumb.webp" alt="経験を語り継ぐ消防士たちのイメージ" loading="lazy" decoding="async" /><span>第5回</span><strong>受け取ったものを、次へ</strong></a>
+      </div>
+      <a class="series-feature-link" href="series/index.html">連載一覧を見る →</a>
+    </section>
+
+    <section class="series-feature wrap" aria-labelledby="equipment-feature-title">
+      <div class="series-feature-heading">
+        
+        <h2 id="equipment-feature-title">わたしは救急資器材</h2>
+        <p>救急資器材の役割、点検、訓練の視点を、現場で使う人の目線から紹介します。</p>
+      </div>
+      <div class="series-feature-grid">
+        <a href="series/equipment-05.html"><img height="180" width="320" class="series-card-thumb" src="images/series-observation-05.webp" alt="血圧計、パルスオキシメータ、体温計、聴診器を描いたイラスト" loading="lazy" decoding="async" /><span>第5回 <em class="series-latest">最新</em></span><strong>観察・測定に用いる機器</strong></a>
+        
+        
+        
+      </div>
+      <a class="series-feature-link" href="series/index.html#equipment-series">連載ページを読む →</a>
+    </section>
+
+    <section class="magazine-intro wrap" aria-labelledby="magazine-intro-title">
+      <div class="magazine-intro-cover-wrap">
+        <img height="842" width="595" class="magazine-intro-cover" src="about/images/2027001.webp" alt="フリーペーパー119LAB. 創刊号の表紙イメージ" />
+        <span class="magazine-status">創刊準備中・表紙イメージ</span>
+      </div>
+      <div class="magazine-intro-text">
+        <span class="category">ABOUT 119LAB.</span>
+        <h2 id="magazine-intro-title">現場と科学と、人をつなぐ。</h2>
+        <p>『119LAB.』と『119LAB.net』は、消防・救急・救助・予防・通信指令などに関わる人のための専門メディアです。</p>
+        <p>現場の経験や新しい技術、研究成果を紙とWebでつなぎ、消防の未来をともに考えます。</p>
+        <div class="magazine-intro-links"><a href="magazine/magazine.html">創刊準備中の誌面を見る →</a><a href="about/about.html">119LAB.について詳しく見る →</a></div>
+      </div>
+    </section>
+    <article>
+      <hr />
+
+      <div class="main">
+        <section class="social-section" aria-labelledby="social-title">
+          <h2 id="social-title" class="social-section-title">SNS・動画</h2>
+          <div class="sns simple-sns-links">
+            <a href="https://www.instagram.com/p/DevNvGij0_l/" target="_blank" rel="noopener noreferrer">Instagramの投稿を見る ↗</a>
+            <a href="https://x.com/shindenzumaster/status/2112777855809790377" target="_blank" rel="noopener noreferrer">Xの投稿を見る ↗</a>
+            <a href="https://www.youtube.com/watch?v=OAZ4yfV-f9o" target="_blank" rel="noopener noreferrer">YouTubeの投稿を見る ↗</a>
+          </div>
+        </section>
+
+        <section id="contact">
+          <p class="top-contact-notice">広告相談・制作協力を含むお問い合わせ受付は現在準備中です。受付開始時期・窓口は、決まり次第ご案内します。</p>
+          <div class="footlinks">
+            <a href="contact/media_kit.html">媒体資料・広告掲載のご案内 →</a><a href="contact/contact.html">お問い合わせ →</a>
+          </div>
+        </section>
+      </div>
+    </article>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer-inner">
+        <div class="site-footer-brand"><a href="index.html">119LAB.net</a><p>消防を科学する。</p></div>
+        <nav class="site-footer-nav" aria-label="フッターメニュー">
+          <a href="article/article.html">最新記事</a>
+          <a href="magazine/magazine.html">フリーペーパー</a>
+          <a href="about/about.html">サイトについて</a>
+          <a href="contact/media_kit.html">広告・媒体資料</a>
+          <a href="contact/contact.html">お問い合わせ</a>
+          
+                  <a href="video/video.html">動画</a>
+        <a href="about/privacy.html">プライバシーポリシー</a><a href="faq/faq.html">よくあるご質問</a>
+<a href="recruit/recruit.html">制作協力・執筆のご案内</a>
+</nav>
+        <small>© 119LAB.編集部 / 119LAB.net</small>
+      </div>
+    </footer>
+  <script src="js/lightbox.js?v=20261028-finish-v6"></script></body>
+</html>
