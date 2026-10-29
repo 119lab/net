@@ -818,10 +818,10 @@ a.lab-corner-card:hover, a.lab-corner-card:focus-visible { border-color: #ff818c
 
 .series-index-panel { margin-top: 38px; padding: clamp(20px, 4vw, 30px); border: 1px solid var(--line); border-top: 4px solid #ef9bb8; border-radius: 7px; background: #12171d; }
 
-.series-episode-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.series-episode-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
 
 @media (width < 1100px) {
-.series-episode-list { grid-template-columns: 1fr; }
+.series-episode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .series-episode-card { border-left-color: #ef9bb8; }
@@ -1196,3 +1196,7 @@ img { height: auto; }
 @media (width < 1100px) { .news-panel { padding: 18px; } .news-panel-heading { display: block; } .news-panel-heading h2 { margin-top: 4px; } }
 
 .news-panel-heading h2 span { color: #ff8991; }
+
+/* Two-column episode cards: keep thumbnails inside narrow cards. */
+.series-episode-list > .series-episode-card { min-width: 0; overflow-wrap: anywhere; }
+.series-episode-list .article-card-thumb { float: none; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; margin: 0 0 12px; }
