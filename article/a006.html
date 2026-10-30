@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>リチウムイオン電池火災は、炎だけでは語れない｜119LAB.net</title>
+  <meta name="description" content="炎が見えなくても、電池の状態は説明しきれない。産総研と東京消防庁の公開資料をもとに、ガス・粉塵・温度変化から熱暴走を読み解きます。">
+  <link rel="canonical" href="https://119lab.github.io/net/article/a006.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="119LAB.net">
+  <meta property="og:title" content="リチウムイオン電池火災は、炎だけでは語れない｜119LAB.net">
+  <meta property="og:description" content="炎が見えなくても、電池の状態は説明しきれない。産総研と東京消防庁の公開資料をもとに、ガス・粉塵・温度変化から熱暴走を読み解きます。">
+  <meta property="og:url" content="https://119lab.github.io/net/article/a006.html">
+  <meta property="og:image" content="https://119lab.github.io/net/article/images/battery-thermal-runaway.webp">
+  <meta property="og:image:width" content="1254">
+  <meta property="og:image:height" content="1254">
+  <meta property="og:image:alt" content="試験空間の電池モジュールと白い噴出物を描いた説明用の概念イラスト">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="リチウムイオン電池火災は、炎だけでは語れない｜119LAB.net">
+  <meta name="twitter:description" content="炎が見えなくても、電池の状態は説明しきれない。産総研と東京消防庁の公開資料をもとに、ガス・粉塵・温度変化から熱暴走を読み解きます。">
+  <meta name="twitter:image" content="https://119lab.github.io/net/article/images/battery-thermal-runaway.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css?v=20261030-site-update">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <div id="common-header"></div>
+  <main class="page article-detail" id="main-content" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li><a href="article.html">最新記事</a></li><li aria-current="page">リチウムイオン電池火災は、炎だけでは語れない</li></ol></nav>
+    <p class="sample-notice"><span class="content-label content-label--review">研究解説</span> 産総研の研究紹介と東京消防庁の実験報告書をもとに、確認された結果と、その読み取りを整理します。</p>
+    <div class="article-detail-heading">
+      <div class="article-detail-meta"><span>119SCIENCE</span><span>#006</span></div>
+      <h1>リチウムイオン電池火災は、炎だけでは語れない</h1>
+      <p class="reading-time">読む目安：約5分</p>
+    </div>
+    <p class="article-subtitle">ガス・粉塵・温度変化から熱暴走を読み解く</p>
+    <p>炎が見えない。そのとき、電池の周りでは何が起きているのだろうか。</p>
+    <p>産業技術総合研究所（産総研）が2026年7月に紹介した実験では、電気自動車用リチウムイオン電池から、目視で火炎を捉えられない状況でも可燃性や毒性を持つガスが出て、残る可能性が示された。火炎の観察に、ガス・粉塵・温度の計測を重ねると、見えてくるものがある。<a href="#ref-1" aria-label="参考資料1">[1]</a></p>
+
+    <figure class="article-figure">
+      <img src="images/battery-thermal-runaway.webp" width="1254" height="1254" alt="試験空間に置かれた電池モジュールから白い噴出物が立ち上り、周囲に観測用の配線と採取管がある概念イラスト" aria-describedby="battery-zoom-hint" decoding="async" fetchpriority="high">
+      <figcaption>説明用の概念イラスト（AI生成）。実験写真や測定結果ではなく、装置・電池の形状は今回の試験を再現したものではありません。白い表現は噴出物のイメージであり、不可視のガスの種類・濃度・分布を示していません。</figcaption>
+      <p class="image-zoom-hint" id="battery-zoom-hint">クリック・タップで拡大（キーボードではEnter）</p>
+    </figure>
+
+    <aside class="article-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">この記事の要点</h2>
+      <ul>
+        <li>火炎が見えないという観察だけでは、ガスの発生や残留を判断できない。</li>
+        <li>温度・電圧・ガス・粉塵の変化を、時間の流れに沿って読み合わせる。</li>
+        <li>電池セルの試験結果を、そのまま実車火災や一律の安全基準に置き換えない。</li>
+      </ul>
+    </aside>
+    <nav class="article-toc" aria-label="記事の目次">
+      <h2>目次</h2>
+      <ol>
+        <li><a href="#thermal-runaway">熱暴走と、目に見える火炎</a></li>
+        <li><a href="#experiment">どんな実験だったのか</a></li>
+        <li><a href="#three-observations">温度・ガス・粉塵を読み合わせる</a></li>
+        <li><a href="#after-flames">炎が収まった後にも、別の情報がいる</a></li>
+        <li><a href="#limits">実験の範囲と、現場への読み替え</a></li>
+        <li><a href="#references">参考資料</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="thermal-runaway">熱暴走と、目に見える火炎</h2>
+    <p>リチウムイオン電池では、内部短絡などをきっかけに化学反応が進み、急激な異常発熱が起きることがある。こうした熱暴走は、発火につながり得る。<a href="#ref-3" aria-label="参考資料3">[3]</a> ただ、外から炎が見えるかどうかと、電池内部や周囲にどのような危険があるかは、分けて考える必要がある。</p>
+    <p>例えば、「火炎は確認できない」は観察した事実である。そこから「可燃性ガスもない」「周囲の空気も安全だ」と進むには、それぞれを裏付ける情報が要る。本稿で注目したいのは、この観察と判断の間にある部分だ。</p>
+
+    <h2 id="experiment">どんな実験だったのか</h2>
+    <p>元の報告書は、東京消防庁が公表した『電気自動車に関する実証実験結果報告書―蓄電池の燃焼・消火試験―』である。加熱試験の対象は、電気自動車向けのNMC系（三元系）とLFP系（リン酸鉄リチウム系）の電池セルを各1種類。車両全体を燃やした試験ではない。加熱時の温度や電圧に加え、周囲のガスと粉塵を計測した。<a href="#ref-2" aria-label="参考資料2、付録2から8">[2：付録2–8]</a></p>
+    <p>今回のLFP系セルでは、加熱に伴ってガスが噴き出しても、自発的な発火は確認されなかった。一方、その噴出ガスに別途加熱して着火させると燃え、粉塵は着火しない試験でも確認された。<a href="#ref-2" aria-label="参考資料2、付録60">[2：付録60]</a> この結果は、発炎の有無だけでは試験中の現象を捉えきれないことを、具体的に示している。</p>
+
+    <h2 id="three-observations">温度・ガス・粉塵を読み合わせる</h2>
+    <h3>温度――数値と一緒に、測った場所を見る</h3>
+    <p>温度の記録を読むときには、どこで、いつ測った値なのかを確かめたい。セル表面、周囲の空間、覆っているものの表面では、同じ「温度」でも対象が違う。実験結果を比べる際も、測定点を省いて最高温度だけを並べると、状態の違いを見失いやすい。これは本稿が資料を読むうえで重視する点である。</p>
+    <h3>ガス――何を、どこで、いつ測れたのか</h3>
+    <p>報告書は、周囲のガスの成分・濃度を概括的に評価する試験であり、電池から出たガス全量の厳密な分析ではないと説明している。採取したガスが管を通って装置へ届くまでの遅れも記されている。<a href="#ref-2" aria-label="参考資料2、付録6から7">[2：付録6–7]</a></p>
+    <p>したがって、温度の変化とガスの検出がグラフ上で近くても、その順序や時間差を読むには、採取位置や測定の応答時間を考慮したい。「リアルタイム」という言葉も、何がどの条件で記録されたかと一緒に受け取る必要がある。</p>
+    <h3>粉塵――煙の見た目で、成分や危険性を決めない</h3>
+    <p>粉塵の計測は、ガスとは別に、放出された粒子の存在や変化を捉える手掛かりになる。煙が薄い・濃いという映像の印象と、粒子の濃度や成分を測ることは、異なる情報だ。なお、粉塵が確認されたという結果から、そのまま粉塵爆発が起きると結論することもできない。本稿では、測定された現象と、そこから判断できる範囲を区別して読む。</p>
+
+    <h2 id="after-flames">炎が収まった後にも、別の情報がいる</h2>
+    <p>報告書には、防火ブランケットで覆う消火試験も含まれる。その条件下では、火炎を抑えても電池の反応を止めきれず、覆った内側に有毒なガスが残る結果が報告されている。<a href="#ref-2" aria-label="参考資料2、付録55から60">[2：付録55–60]</a></p>
+    <p>ここからの読み取りは、火炎、温度、ガスを、それぞれの対象として確かめることだ。「炎が収まった」と「内部の反応が止まった」、さらに「周囲の空気が安全になった」を、一つの確認で済ませることはできない。この試験を、あらゆる消火方法で同じ経過をたどるという意味に広げるべきでもない。</p>
+
+    <h2 id="limits">実験の範囲と、現場への読み替え</h2>
+    <p>今回の知見は、選ばれた電池セルと、定められた加熱・計測条件に基づく。電池の材料や構造、充電状態、劣化状態が違う場合まで、同じ結果を保証するものではない。産総研も、こうした条件の違いを踏まえたデータの蓄積と、消火後の確認方法の検討を今後の課題としている。<a href="#ref-1" aria-label="参考資料1">[1]</a></p>
+    <p>このため、本稿から「何分待てばよい」「何℃なら近づける」という一律の基準は導けない。実際の消防活動への適用には、車両・電池の仕様や現場条件、所属本部の活動基準などを踏まえた検討が必要になる。</p>
+    <p>研究を訓練や振り返りに生かすなら、「何を見たか」「何を測ったか」「まだ分からないことは何か」を分けて記録するところから始められる。炎の映像に、温度、ガス、粉塵という観察の軸を重ねる。リチウムイオン電池火災を理解するには、その時間の流れまで見ていきたい。</p>
+
+    <h2 id="references">参考資料</h2>
+    <ol class="article-references">
+      <li id="ref-1">産業技術総合研究所 安全科学研究部門（2026年7月10日）．<a href="https://riss.aist.go.jp/research/20260710-3581/" target="_blank" rel="noopener noreferrer">リチウムイオン電池発火時に発生するガスおよび粉塵の評価</a>．</li>
+      <li id="ref-2">東京消防庁（2026年3月）．<a href="https://www.tfd.metro.tokyo.lg.jp/content/000102764.pdf" target="_blank" rel="noopener noreferrer">電気自動車に関する実証実験結果報告書―蓄電池の燃焼・消火試験―（付録・PDF、約6MB）</a>．協力：産業技術総合研究所．<a href="https://www.tfd.metro.tokyo.lg.jp/kouhyou/report/electricity.html" target="_blank" rel="noopener noreferrer">調査研究結果の掲載ページ</a>．</li>
+      <li id="ref-3">製品評価技術基盤機構（NITE）（2025年5月27日）．<a href="https://www.nite.go.jp/jiko/chuikanki/mailmagazin/2025fy/vol477_250527.html" target="_blank" rel="noopener noreferrer">製品安全情報マガジン Vol.477「外出中のスマートフォン、モバイルバッテリー、携帯用扇風機による事故」</a>．発火のメカニズムの説明を参照．</li>
+    </ol>
+    <aside class="related-articles" aria-labelledby="related-title">
+      <h2 id="related-title">ほかの記事を読む</h2>
+      <ul><li><a href="a003.html"><span class="related-category">119SCIENCE</span><span class="content-label content-label--review">文献レビュー・公開前原稿</span><strong>放水戦術を科学する →</strong></a></li></ul>
+    </aside>
+    <nav class="article-detail-nav" aria-label="記事ナビゲーション"><a href="article.html">← 最新記事一覧へ</a><a href="../index.html">トップページへ →</a></nav>
+  </main>
+  <div id="common-footer"></div>
+  <script src="../js/analytics.js?v=20261030-site-update" defer></script>
+  <script src="../js/common.js?v=20261030-site-update" defer></script>
+</body>
+</html>

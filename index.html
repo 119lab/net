@@ -4,12 +4,20 @@
 <head>
   <meta charset="UTF-8">
     <!-- 検索・SNS共有設定 -->
-    <title>【架空】119LAB.net｜消防を科学する。消防専門メディア｜119LAB.net</title>
+    <title>【架空】119LAB.net｜消防を科学する。消防専門メディア</title>
     <meta name="description" content="消防・救急・救助・予防・通信指令の知識と技術をつなぐ消防専門メディア。">
     <link rel="canonical" href="https://119lab.github.io/net/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "119LAB.net",
+      "url": "https://119lab.github.io/net/"
+    }
+    </script>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="119LAB.net">
-    <meta property="og:title" content="【架空】119LAB.net｜消防を科学する。消防専門メディア｜119LAB.net">
+    <meta property="og:title" content="【架空】119LAB.net｜消防を科学する。消防専門メディア">
     <meta property="og:description" content="消防・救急・救助・予防・通信指令の知識と技術をつなぐ消防専門メディア。">
     <meta property="og:url" content="https://119lab.github.io/net/">
     <meta property="og:image" content="https://119lab.github.io/net/images/ogp.webp">
@@ -18,7 +26,7 @@
     <meta property="og:image:alt" content="119LAB.net 消防を科学する">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【架空】119LAB.net｜消防を科学する。消防専門メディア｜119LAB.net">
+    <meta name="twitter:title" content="【架空】119LAB.net｜消防を科学する。消防専門メディア">
     <meta name="twitter:description" content="消防・救急・救助・予防・通信指令の知識と技術をつなぐ消防専門メディア。">
     <meta name="twitter:image" content="https://119lab.github.io/net/images/ogp.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +68,7 @@
       <noscript><p>お知らせの表示にはJavaScriptを有効にしてください。</p></noscript>
     </section>
     <script>
-      fetch("parts/news.html?v=20261030-yoboki005")
+      fetch("parts/news.html?v=20261030-science006")
         .then(response => {
           if (!response.ok) throw new Error("お知らせの読み込み失敗");
           return response.text();
@@ -96,17 +104,17 @@
           <span class="content-label content-label--sample">投稿記事案</span>
           <strong class="lab-current-title">経験を伝えるだけでなく、考える力を育てる</strong>
         </a>
-        <a class="lab-corner-card" href="article/a003.html">
-          <img height="941" width="1672" class="corner-card-thumb" src="article/images/water-distribution.webp" alt="放水による水分布の概念イラスト" loading="lazy" decoding="async">
+        <a class="lab-corner-card" href="article/a006.html">
+          <img height="1254" width="1254" class="corner-card-thumb" src="article/images/battery-thermal-runaway.webp" alt="電池モジュールと白い噴出物を描いた説明用の概念イラスト" loading="lazy" decoding="async">
           <h3>119<span>SCIENCE</span></h3>
           <p>科学・研究・論文</p>
-          <span class="content-label content-label--review">文献レビュー</span>
-          <strong class="lab-current-title">放水戦術を科学する</strong>
+          <span class="content-label content-label--review">研究解説</span>
+          <strong class="lab-current-title">リチウムイオン電池火災は、炎だけでは語れない</strong>
           
         </a>
       </div>
 
-      <p class="content-status-note">企画サンプルは架空の事例を含みます。文献レビューは公開前原稿です。</p>
+      <p class="content-status-note">企画サンプルは架空の事例を含みます。研究解説は公開資料に基づきます。公開前原稿にはその旨を表示しています。</p>
       <a class="lab-all-articles" href="article/article.html">最新記事一覧を見る →</a>
     </section>
 
