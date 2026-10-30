@@ -3017,7 +3017,7 @@ img {
   }
 }
 
-.series-hub .series-feature-heading h2, .yoboki-feature .series-feature-heading h2 {
+.series-hub .series-feature-heading h2 {
   color: #ff8991;
 }
 
@@ -3025,27 +3025,8 @@ img {
   margin-top: 10px;
 }
 
-.yoboki-episode-link-list {
-  margin-top: 14px;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 1.25em;
-}
-
-.yoboki-episode-link-list li {
-  padding-left: 4px;
-  color: var(--white);
-}
-
-.yoboki-episode-link-list a {
-  color: var(--white);
-  line-height: 1.8;
-  text-underline-offset: 0.2em;
-}
-
-.yoboki-episode-link-list a:hover, .yoboki-episode-link-list a:focus-visible {
-  color: #ffadb3;
+.yoboki-feature .series-feature-link {
+  color: #ff8991;
 }
 
 /* Header and hamburger menu */

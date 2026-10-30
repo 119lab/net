@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=20261030-yoboki002">
+  <link rel="stylesheet" href="css/style.css?v=20261030-yoboki-home-format">
 
   <!-- Google Analytics 4 -->
   <!-- Microsoft Clarity -->
@@ -60,7 +60,7 @@
       <noscript><p>お知らせの表示にはJavaScriptを有効にしてください。</p></noscript>
     </section>
     <script>
-      fetch("parts/news.html?v=20261030-yoboki003")
+      fetch("parts/news.html?v=20261030-yoboki005")
         .then(response => {
           if (!response.ok) throw new Error("お知らせの読み込み失敗");
           return response.text();
@@ -120,11 +120,12 @@
     <section class="series-feature yoboki-feature wrap" aria-labelledby="yoboki-feature-title">
       <div class="series-feature-heading">
         <h2 id="yoboki-feature-title">予防課員のボヤキ</h2>
+        <p>予防課員の日常を綴る、小さな物語。</p>
       </div>
-      <ul class="yoboki-episode-link-list">
-        <li><a href="voice/yoboki-003.html">第3話　引き継いだのは、ファイルだけ</a></li>
-        <li><a href="voice/yoboki-002.html">第2話　訓練より、日程調整が難しい</a></li><li><a href="voice/yoboki-001.html">第1話　その荷物、そこじゃないんです</a></li>
-      </ul>
+      <div class="series-feature-grid">
+        <a href="voice/yoboki-005.html"><img height="1254" width="1254" class="series-card-thumb yoboki-square-thumb" src="images/voice-yoboki-005-ordinary-day.webp" alt="印刷会社の作業場で、予防課員が担当者の確認メモを見ながら穏やかに話すイラスト" loading="lazy" decoding="async"><span>第5話</span><strong>何もなかった、と言われましても</strong></a>
+      </div>
+      <a class="series-feature-link" href="series/index.html#yoboki-series">連載一覧を見る →</a>
     </section>
 
     <section class="series-feature wrap" aria-labelledby="series-feature-title">
