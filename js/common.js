@@ -53,8 +53,8 @@
 
   // Requests are independent. The menu only waits for its header placeholder.
   const header = availablePart('parts/header.html', headerFallback);
-  const menu = availablePart('parts/menu.html', menuFallback);
-  const footer = availablePart('parts/footer.html', footerFallback);
+  const menu = availablePart('parts/menu.html?v=20261030-discovery', menuFallback);
+  const footer = availablePart('parts/footer.html?v=20261030-discovery', footerFallback);
 
   const headerTask = (async function () {
     const target = document.getElementById('common-header');

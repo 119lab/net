@@ -2837,7 +2837,7 @@ img {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .news-panel-heading h2 {
@@ -2857,12 +2857,78 @@ img {
 }
 
 .news-item {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  color: #d8dee7;
-  line-height: 1.7;
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  align-items: start;
+  gap: 4px 24px;
+  margin: 0;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+  color: var(--white);
+  text-align: left;
+}
+
+.news-item:last-child {
+  border-bottom: 0;
+}
+
+.news-item time {
+  display: block;
+  margin: 0;
+  padding-top: 8px;
+  color: #b9c6cf;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+.news-item .news-item-content {
+  min-width: 0;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+
+.news-item-content a {
+  display: block;
+  min-height: 44px;
+  padding-block: 6px;
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: #8999a9;
+  text-underline-offset: .2em;
+  text-decoration-thickness: 1px;
+}
+
+.news-item-content a:hover {
+  color: #ffadb3;
+  text-decoration-color: currentColor;
+}
+
+.news-item-content a:focus-visible,
+.news-panel .news-archive-link:focus-visible {
+  outline: 3px solid #ffadb3;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.news-panel .news-archive-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid #667482;
+  border-radius: 6px;
+  color: var(--white);
+}
+
+.news-panel .news-archive-link:hover {
+  border-color: #ffadb3;
+  color: #ffadb3;
 }
 
 @media (width < 1100px) {
@@ -2879,6 +2945,14 @@ img {
 
   .news-panel-heading h2 {
     margin-top: 4px;
+  }
+
+  .news-item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .news-item time {
+    padding-top: 0;
   }
 }
 
@@ -3358,3 +3432,13 @@ img {
   aspect-ratio: 1;
   object-fit: contain;
 }
+
+/* Long navigation stays inside the viewport. */
+.has-hamburger .mainnav {
+  max-height: calc(100vh - 140px);
+  max-height: calc(100dvh - 140px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  justify-content: flex-start;
+}
+.has-hamburger .mainnav > a { flex-shrink: 0; }
