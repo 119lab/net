@@ -72,6 +72,11 @@
       <noscript><p>お知らせの表示にはJavaScriptを有効にしてください。</p></noscript>
       <a class="news-archive-link" href="news/index.html">お知らせ一覧を見る →</a>
     </section>
+    <style>
+      .news-past { margin-top: 12px; }
+      .news-past > summary { cursor: pointer; padding: 12px 0; color: #ff8991; font-weight: 700; }
+      .news-past > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    </style>
     <script>
       fetch("parts/news.html?v=20261101-news")
         .then(response => {
@@ -81,10 +86,17 @@
         .then(html => {
           const template = document.createElement("template");
           template.innerHTML = html;
-          // news.html keeps the newest items first; display only the first three.
-          template.content.querySelectorAll(".news-item").forEach((item, index) => {
-            if (index >= 3) item.remove();
-          });
+          // Keep the latest three visible; older notices expand on demand.
+          const items = [...template.content.querySelectorAll(".news-item")];
+          if (items.length > 3) {
+            const archive = document.createElement("details");
+            archive.className = "news-past";
+            const summary = document.createElement("summary");
+            summary.textContent = "過去のお知らせ（" + (items.length - 3) + "件）";
+            archive.append(summary);
+            items.slice(3).forEach(item => archive.append(item));
+            template.content.append(archive);
+          }
           document.getElementById("common-news").replaceChildren(template.content);
         })
         .catch(error => {
