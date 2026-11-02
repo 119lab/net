@@ -12,6 +12,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "119LAB.net",
+      "alternateName": "119LAB",
       "url": "https://119lab.github.io/net/"
     }
     </script>
@@ -32,15 +33,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=20261030-yoboki-home-format">
+  <link rel="stylesheet" href="css/style.css?v=20261101-news">
 
   <!-- Google Analytics 4 -->
   <!-- Microsoft Clarity -->
-  <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-</head>
+  <!-- サイトアイコン：既存の「119」ロゴを使用 -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64 256x256">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/discovery.css?v=20261101-news"></head>
 
   
 
@@ -62,19 +65,27 @@
       </div>
     </section>
 
+    <section class="home-search wrap" aria-label="サイト内検索"><form class="site-search-form" action="search/search.html" method="get" role="search"><div class="site-search-field"><label for="home-search-input">記事・連載をキーワードで探す</label><input id="home-search-input" type="search" name="q" maxlength="120" placeholder="例：救助 確認"></div><button type="submit">検索</button></form></section>
     <section class="news-panel wrap" aria-labelledby="news-title">
       <div class="news-panel-heading"><span class="category">お知らせ</span><h2 id="news-title">119<span style="color: #ff8991;">NEWS</span></h2></div>
       <div id="common-news"><p role="status">お知らせを読み込んでいます。</p></div>
       <noscript><p>お知らせの表示にはJavaScriptを有効にしてください。</p></noscript>
+      <a class="news-archive-link" href="news/index.html">お知らせ一覧を見る →</a>
     </section>
     <script>
-      fetch("parts/news.html?v=20261030-science006")
+      fetch("parts/news.html?v=20261101-news")
         .then(response => {
           if (!response.ok) throw new Error("お知らせの読み込み失敗");
           return response.text();
         })
         .then(html => {
-          document.getElementById("common-news").innerHTML = html;
+          const template = document.createElement("template");
+          template.innerHTML = html;
+          // news.html keeps the newest items first; display only the first three.
+          template.content.querySelectorAll(".news-item").forEach((item, index) => {
+            if (index >= 3) item.remove();
+          });
+          document.getElementById("common-news").replaceChildren(template.content);
         })
         .catch(error => {
           console.error(error);
@@ -88,6 +99,7 @@
         <span class="category">EXPLORE 119LAB.net</span>
         <h2 id="lab-corners-title">消防の今と未来を、3つの視点から。</h2>
       </div>
+<nav class="category-navigation" aria-label="カテゴリー別の記事一覧"><a href="article/tech.html">119TECHの記事一覧</a><a href="article/voice.html">119VOICEの記事一覧</a><a href="article/science.html">119SCIENCEの記事一覧</a></nav>
       <div class="lab-corner-grid">
         <a class="lab-corner-card" href="article/a004.html">
           <img height="900" width="1600" class="corner-card-thumb" src="images/002-fire-dx-tablet.webp" alt="タブレットのデジタル地図を確認する消防士のイメージ" loading="lazy" decoding="async">
@@ -125,6 +137,7 @@
       <a class="series-feature-link" href="series/index.html">すべての連載を見る →</a>
     </section>
 
+    <section class="series-feature wrap" aria-labelledby="rescue-feature-title"><div class="series-feature-heading"><h2 id="rescue-feature-title">救助の「なぜ？」を考える</h2><p>いつもの行動を、次の訓練の学びに変える。全5回。</p></div><div class="series-feature-grid"><a href="series/rescue-001.html"><img class="series-card-thumb" src="images/rescue-001.webp" width="1536" height="864" alt="装備と確認表を一緒に見直す救助隊員たち" loading="lazy"><span>第1回</span><strong>「確認した」と「確かめた」は同じか</strong></a></div><a class="series-feature-link" href="series/index.html#rescue-series">全5回の連載一覧を見る →</a></section>
     <section class="series-feature yoboki-feature wrap" aria-labelledby="yoboki-feature-title">
       <div class="series-feature-heading">
         <h2 id="yoboki-feature-title">予防課員のボヤキ</h2>
@@ -155,7 +168,7 @@
         <p>救急資器材の役割、点検、訓練の視点を、現場で使う人の目線から紹介します。</p>
       </div>
       <div class="series-feature-grid">
-        <a href="series/equipment-05.html"><img height="180" width="320" class="series-card-thumb" src="images/series-observation-05.webp" alt="血圧計、パルスオキシメータ、体温計、聴診器を描いたイラスト" loading="lazy" decoding="async"><span>第5回 <em class="series-latest">最新</em></span><strong>観察・測定に用いる機器</strong></a>
+        <a href="series/equipment-05.html"><img height="1080" width="1080" class="series-card-thumb" src="images/series-observation-05.webp" alt="血圧計、パルスオキシメータ、体温計、聴診器を描いたイラスト" loading="lazy" decoding="async"><span>第5回 <em class="series-latest">最新</em></span><strong>観察・測定に用いる機器</strong></a>
         
         
         
@@ -187,6 +200,7 @@
             <a href="https://x.com/shindenzumaster/status/2112777855809790377" target="_blank" rel="noopener noreferrer">Xの投稿を見る ↗</a>
             <a href="https://www.youtube.com/watch?v=OAZ4yfV-f9o" target="_blank" rel="noopener noreferrer">YouTubeの投稿を見る ↗</a>
           </div>
+          <p><a class="series-feature-link" href="sns/sns.html">SNSページを見る →</a></p>
         </section>
 
         <section id="contact">
@@ -199,5 +213,5 @@
     </article>
     </main>
     <div id="common-footer"></div>
-  <script src="js/analytics.js?v=20261030-site-update" defer></script><script src="js/common.js?v=20261030-site-update" defer></script></body>
+  <script src="js/analytics.js?v=20261030-site-update" defer></script><script src="js/common.js?v=20261030-discovery" defer></script></body>
 </html>

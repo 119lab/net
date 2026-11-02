@@ -13,13 +13,13 @@
   <meta property="og:url" content="https://119lab.github.io/net/series/index.html">
   <meta property="og:image" content="https://119lab.github.io/net/images/ogp.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.css?v=20261030-yoboki002">
+  <link rel="stylesheet" href="../css/style.css?v=20261030-discovery">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
 <style>
-    /* Keep this episode list in two columns, including on phones. */
+    /* Two columns on desktop; one episode per row on smaller screens. */
     #important-series .series-episode-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -38,8 +38,13 @@
       object-fit: cover;
       margin: 0 0 12px;
     }
+    @media (width < 1100px) {
+      #important-series .series-episode-list {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-</head>
+<link rel="stylesheet" href="../css/rescue-series.css?v=20261030-checked"></head>
 <body>
 <a class="skip-link" href="#main-content">本文へスキップ</a>
   <div id="common-header"></div>
@@ -52,6 +57,7 @@
     <div class="article-index-heading"><p class="article-index-eyebrow">不定期更新連載</p><h1>連載</h1><p class="article-index-lead">消防の現場で生まれる思いや気づきを、エピソードや資器材の視点から紹介する連載です。</p></div>
     
 
+<section class="series-feature" id="rescue-series" aria-labelledby="rescue-series-title"><div class="series-feature-heading"><h2 id="rescue-series-title">救助の「なぜ？」を考える</h2><p>いつもの行動を、次の訓練の学びに変える。</p><p class="series-count">全5回</p></div><div class="rescue-grid"><a class="article-card" href="rescue-001.html"><img src="../images/rescue-001.webp" width="1536" height="864" alt="装備と確認表を一緒に見直す救助隊員たち" loading="lazy"><span>第1回</span><h3>「確認した」と「確かめた」は同じか</h3><p>確認する対象・判断基準・異常時の対応を、言葉にしてみる。</p></a><a class="article-card" href="rescue-002.html"><img src="../images/rescue-002.webp" width="1536" height="864" alt="訓練計画を示しながら認識を確かめ合う救助隊員たち" loading="lazy"><span>第2回</span><h3>「了解」で、本当に伝わったか</h3><p>返事と理解の違いから、指示・報告の伝わり方を考える。</p></a><a class="article-card" href="rescue-003.html"><img src="../images/rescue-003.webp" width="1536" height="864" alt="訓練前に手を上げて確認を求め、隊長が耳を傾ける場面" loading="lazy"><span>第3回</span><h3>急ぐときほど、何を省かないか</h3><p>速さを支える準備と、違和感を共有する判断を考える。</p></a><a class="article-card" href="rescue-004.html"><img src="../images/rescue-004.webp" width="1536" height="864" alt="訓練前にホワイトボードで到達目標を話し合う救助隊員たち" loading="lazy"><span>第4回</span><h3>その訓練、何ができれば合格か</h3><p>所要時間に加えて、判断・連携・確認の過程を見直す。</p></a><a class="article-card" href="rescue-005.html"><img src="../images/rescue-005.webp" width="1536" height="864" alt="訓練後にノートを囲み、若手の気づきに耳を傾ける先輩隊員" loading="lazy"><span>第5回</span><h3>経験を、次の隊員の力にする</h3><p>成功も迷いも言葉にして、判断の理由を次へつなぐ。</p></a></div></section>
     <section class="series-feature" id="important-series" aria-labelledby="important-series-title">
       <div class="series-feature-heading"><h2 id="important-series-title">ある消防士が大事にしていること</h2><p>消防の仕事で大切にしたいことを、短いエピソードと一つの言葉で綴ります。</p></div>
       <div class="series-episode-list" aria-label="ある消防士が大事にしていること 連載一覧">
@@ -84,16 +90,16 @@
         <p class="series-count">全5回</p>
       </div>
       <div class="series-feature-grid">
-        <a href="equipment-01.html"><img height="180" width="320" class="series-card-thumb" src="../images/series-bvm-01.webp" alt="救急車内の準備スペースに置かれたバッグバルブマスク" loading="lazy" decoding="async"><span>第1回</span><strong>バッグバルブマスク</strong></a>
-        <a href="equipment-02.html"><img height="180" width="320" class="series-card-thumb" src="../images/series-suction-02.webp" alt="救急車内で点検される携帯型吸引器と関連資器材" loading="lazy" decoding="async"><span>第2回</span><strong>吸引器と関連資器材</strong></a>
-        <a href="equipment-03.html"><img height="180" width="320" class="series-card-thumb" src="../images/series-aed-03.webp" alt="AED本体、電極パッド、予備バッテリーと訓練用マネキンのイラスト" loading="lazy" decoding="async"><span>第3回</span><strong>AEDと除細動関連資器材</strong></a>
-        <a href="equipment-04.html"><img height="180" width="320" class="series-card-thumb" src="../images/series-oxygen-04.webp" alt="酸素ボンベ、流量計、接続部、チューブ、酸素マスクを描いたイラスト" loading="lazy" decoding="async"><span>第4回</span><strong>酸素投与に用いる資器材</strong></a>
-        <a href="equipment-05.html"><img height="180" width="320" class="series-card-thumb" src="../images/series-observation-05.webp" alt="血圧計、パルスオキシメータ、体温計、聴診器を描いたイラスト" loading="lazy" decoding="async"><span>第5回 <em class="series-latest">最新</em></span><strong>観察・測定に用いる機器</strong></a>
+        <a href="equipment-01.html"><img height="1080" width="1080" class="series-card-thumb" src="../images/series-bvm-01.webp" alt="救急車内の準備スペースに置かれたバッグバルブマスク" loading="lazy" decoding="async"><span>第1回</span><strong>バッグバルブマスク</strong></a>
+        <a href="equipment-02.html"><img height="1080" width="1080" class="series-card-thumb" src="../images/series-suction-02.webp" alt="救急車内で点検される携帯型吸引器と関連資器材" loading="lazy" decoding="async"><span>第2回</span><strong>吸引器と関連資器材</strong></a>
+        <a href="equipment-03.html"><img height="1080" width="1080" class="series-card-thumb" src="../images/series-aed-03.webp" alt="AED本体、電極パッド、予備バッテリーと訓練用マネキンのイラスト" loading="lazy" decoding="async"><span>第3回</span><strong>AEDと除細動関連資器材</strong></a>
+        <a href="equipment-04.html"><img height="1080" width="1080" class="series-card-thumb" src="../images/series-oxygen-04.webp" alt="酸素ボンベ、流量計、接続部、チューブ、酸素マスクを描いたイラスト" loading="lazy" decoding="async"><span>第4回</span><strong>酸素投与に用いる資器材</strong></a>
+        <a href="equipment-05.html"><img height="1080" width="1080" class="series-card-thumb" src="../images/series-observation-05.webp" alt="血圧計、パルスオキシメータ、体温計、聴診器を描いたイラスト" loading="lazy" decoding="async"><span>第5回 <em class="series-latest">最新</em></span><strong>観察・測定に用いる機器</strong></a>
       </div>
       <a class="series-feature-link" href="equipment-05.html">第5回を見る →</a>
     </section>
     <a class="article-back" href="../index.html">← トップに戻る</a>
   </main>
   <div id="common-footer"></div>
-<script src="../js/analytics.js?v=20261030-site-update" defer></script><script src="../js/common.js?v=20261030-site-update" defer></script></body>
+<script src="../js/analytics.js?v=20261030-site-update" defer></script><script src="../js/common.js?v=20261030-discovery" defer></script></body>
 </html>
