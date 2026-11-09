@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED = {
     'index.html', '404.html', 'article/article.html', 'series/index.html',
     'article/tech.html', 'article/voice.html', 'article/science.html',
-    'search/search.html',
+    'search.html',
 }
 
 
@@ -72,7 +72,7 @@ def category(path, source):
         match = re.search(r'119(?:TECH|VOICE|SCIENCE)', source)
         if match:
             return match.group(0)
-    if path.startswith('news/'):
+    if path == 'news.html':
         return 'お知らせ'
     return 'ご案内'
 
